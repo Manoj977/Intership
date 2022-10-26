@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+.bgry{
+    margin-top: 40px;
+    background: url("image.jpg");
+    background-repeat: repeat-y;
+    width: 100vw;
+    height: 100vh;
+    
+}
+ .bgry p{
+    width: 20%;
+    color: antiquewhite;
+    padding: 20px;
+ }

@@ -1,0 +1,22 @@
+.block_1,
+.block_2,
+.block_3 {
+  display: block;
+  width: 40vw;
+  background: lightcoral;
+  margin: 30px auto;
+}
+h1 {
+  text-align: center;
+}
+
+.inline_1,
+.inline_2,
+.inline_3 {
+  background: orange;
+  display: inline;
+}
+.inline {
+  width: 40vw;
+  margin: 30px auto;
+}

@@ -1,0 +1,118 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+  box-sizing: border-box;
+  font-family: poppins, "sans-serief";
+  color: rgb(101, 99, 99);
+}
+body {
+  background-color: lightpink;
+  margin: 30px auto;
+}
+
+a {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+body section {
+  display: flex;
+  justify-content: center;
+}
+
+.one,
+.two,
+.three {
+  display: block;
+  padding: 10px;
+  height: 94vh;
+  width: 53vh;
+  margin: 20px;
+  /* box-shadow: 2px 3px 4px ghostwhite; */
+  background: white;
+  border-radius: 10px;
+}
+
+.one {
+  border-top: 15px solid rgb(90, 160, 185);
+}
+.two {
+  border-top: 15px solid rgb(90, 101, 185);
+}
+
+.three {
+  border-top: 15px solid rgb(123, 90, 185);
+}
+
+.one_div,
+.two_div,
+.three_div {
+  display: flex;
+  justify-content: space-between;
+}
+.image {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+.num {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  background-color: rgb(193, 191, 191);
+}
+.contant {
+  margin: 10px;
+  border: 3px solid rgb(164, 163, 163);
+  width: 21vw;
+  height: 30vh;
+  border-radius: 8px;
+  padding: px;
+  margin: 20px;
+}
+.contant_one {
+  display: flex;
+  height: 15vh;
+}
+.contant_one_2 {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.contant_one_2 a.title {
+  font-size: 20px;
+  color: rgb(75, 73, 73);
+}
+.contant_one_2 a.list {
+  font-size: 15px;
+  color: gray;
+}
+.contant_two img {
+  border-radius: 50%;
+}
+.contant_2 {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 10px;
+  float: left;
+  align-items: center;
+}
+.contant_2 .image {
+  width: 30px;
+  height: 30px;
+  opacity: 0.6 !important;
+  border-radius: 50%;
+}
+.conatct_2 a {
+  font-size: 10px;
+}
+
+.contant_one_2 .bg {
+  background-color: orangered;
+  opacity: 0.7;
+  color: white !important;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.conatct_2 img {
+  opacity: 0.2;
+}

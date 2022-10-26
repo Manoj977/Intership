@@ -1,0 +1,157 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background: wheat;
+}
+
+.fontfamily {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.fontsize {
+  font-size: 20px;
+}
+
+.fontweight {
+  font-weight: 600;
+}
+
+.fontstyleoblique {
+  font-style: oblique;
+}
+.italic {
+  font-style: italic;
+}
+
+.textalign_left {
+  text-align: left;
+}
+
+.textalign_right {
+  text-align: right;
+}
+.textalign_center {
+  text-align: center;
+}
+.textalign_justify {
+  text-align: justify;
+}
+
+.textindent {
+  text-indent: 90px;
+}
+
+.texttransform_upper {
+  text-transform: uppercase;
+}
+.texttransform_lower {
+  text-transform: lowercase;
+}
+
+.texttransform_capital {
+  text-transform: capitalize;
+}
+
+.textdecoration_underline {
+  text-decoration: underline;
+}
+.textdecoration_line {
+  text-decoration: line-through;
+}
+.textdecoration_overline {
+  text-decoration: overline;
+}
+
+.lineheight {
+  line-height: 60px;
+}
+
+.letterspacing {
+  letter-spacing: 10px;
+}
+
+.wordspacing {
+  word-spacing: 10px;
+}
+
+.padding {
+  background-color: aqua;
+  padding: 50px;
+}
+
+.padding_top {
+  background-color: aqua;
+  padding-top: 40px;
+}
+
+.padding_right {
+  background-color: aqua;
+  padding-right: 80px;
+}
+
+.padding_bottom {
+  background-color: aqua;
+  padding-bottom: 10px;
+}
+.padding_left {
+  background-color: aqua;
+  padding-left: 40px;
+}
+
+.margin {
+  background-color: cadetblue;
+  margin: 40px;
+}
+.margin_left {
+  background-color: cadetblue;
+  margin-left: 80px;
+}
+.margin_right {
+  background-color: cadetblue;
+  margin-right: 70px;
+}
+
+.margin_bottom {
+  background-color: cadetblue;
+  margin-bottom: 40px;
+}
+
+.margin_top {
+  background-color: cadetblue;
+  margin-top: 60px;
+}
+
+.border {
+  border: 2px solid gray;
+}
+.border_left {
+  border: 2px dotted gray;
+  border-left:40px solid gray;
+}
+.border_right {
+  border: 10px double gray;
+  border-right:30px solid gray;
+}
+.border_top {
+  border: 5px dashed gray;
+  border-top: 30px solid gray;
+}
+
+.borderradius {
+  border: 3px solid gray;
+  border-radius: 10px;
+}
+
+.borderradius_left{
+    border:3px solid gray;
+    border-radius: 20px 40px;
+}
+.borderradius_right{
+    border:3px solid gray;
+    border-radius: 20px 40px 80px 90px;
+}
+.negativemargin{
+    margin-top: -50px;
+}

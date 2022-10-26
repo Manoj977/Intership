@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.translate {
+  display: flex;
+}
+.one,
+.two,
+.three {
+  width: 20vw;
+  height: 10vw;
+  text-align: center;
+  margin: 10px;
+  padding: 30px;
+}
+.one {
+  background-color: blueviolet;
+  transform: translate(30px, 60px);
+}
+.two {
+  background-color: cadetblue;
+  transform: translateX(90px);
+}
+
+.three {
+  background-color: cadetblue;
+  transform: translateY(60px);
+}
+
+.scale-x {
+  margin-bottom: 40px;
+  transform: scaleX(0.5);
+  background-color: brown;
+}
+.scale-y {
+  margin-bottom: 40px;
+  transform: scaleY(2);
+  background-color: brown;
+}
+
+.scale-xy {
+  margin-bottom: 40px;
+  transform: scale(0.3, 0.7);
+  background-color: brown;
+}
+
+.rotateX {
+  margin-top: 5px;
+  background-color: darkgray;
+  padding: 10px;
+  width: 30vw;
+  transform: rotateX(160deg);
+}
+
+.rotateY {
+  margin-top: 5px;
+  background-color: darkgray;
+  padding: 10px;
+  width: 30vw;
+  transform: rotateY(120deg);
+}
+.rotateXY {
+  margin-top: 15px;
+  background-color: darkgray;
+  padding: 10px;
+  width: 30vw;
+  transform: rotate3d(3, 4, 5, 60deg);
+}
+
+.skewX {
+  transform: skewX(40deg);
+}
+
+.skewY {
+    transform: skewY(20deg);
+  }
+
+  .duration{
+    width: 200px;
+    height: 200px;
+    transition: 3s;
+    background-color: rgb(60, 57, 111);
+  }
+  .duration:hover{
+    transform: rotate3d(3,4,5,130deg);
+    transition: ease-in-out;
+  }
+  .duration{
+    width: 200px;
+    height: 200px;
+    transition: 3s;
+    background-color: rgb(60, 57, 111);
+  }
+  .duration:hover{
+    transform: rotate3d(3,4,5,130deg);
+    transition: ease-in-out;
+  }
+
+  .func{
+    width: 200px;
+    height: 200px;
+    transition: 10s;
+    transition-duration: 30s;
+    background-color: cornflowerblue;
+  }
+  .func:hover{
+    transform:skewX(40deg);
+    transition: ease-out;
+  }
+
+  
+  .func_one{
+    width: 200px;
+    height: 200px;
+    transition: 10s;
+    transition-delay: 3s;
+    background-color: rgb(194, 100, 237);
+  }
+  .func_one:hover{
+    transform: rotate3d(3,4,5,130deg);
+    transition: ease-in;
+  }
+.func_two{
+    width: 200px;
+    height: 200px;
+    transition: 10s;
+    background-color: rgb(100, 237, 127);
+}
+.func_two:hover{
+    transform: rotate3d(3,4,5,130deg);
+    transition: linear;
+}
+.func_three{
+    width: 200px;
+    height: 200px;
+    transition: 10s;
+    background-color: rgb(105, 100, 237);
+}
+.func_three:hover{
+    transform: rotate3d(3,4,5,130deg);
+    transition: ease;
+}

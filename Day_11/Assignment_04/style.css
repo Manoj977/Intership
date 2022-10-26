@@ -1,0 +1,315 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  color: white;
+}
+.content {
+  /* border: 2px solid; */
+  height: 183vw;
+  font-family: poppins, "sans-serief";
+  background-color: black;
+}
+.content .part_one {
+  height: 25%;
+  /* border: 2px solid; */
+  background: url("https://www.desktopbackground.org/download/1440x900/2013/07/30/615486_photography-portfolio-websites-minimalist-amazing-1920x1080-hd_1920x1080_h.jpg");
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.content .part_two {
+  height: 25%;
+  background: #191919;
+  /* border: 2px solid; */
+}
+.content .part_three {
+  height: 25%;
+  /* border: 2px solid; */
+}
+.content .part_four {
+  height: 25%;
+  /* border: 2px solid; */
+}
+/**********************/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+ul {
+  display: flex;
+}
+li {
+  padding: 10px;
+  list-style: none;
+  cursor: pointer;
+}
+li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 0px 30px;
+  transition: 0.4s ease-in-out;
+}
+li a:hover {
+  color: orangered;
+}
+a {
+  text-decoration: none;
+}
+.part_one header .button button {
+  cursor: pointer;
+  padding: 10px;
+  width: 120px;
+  border: none;
+  background-color: orangered;
+  font-family: "Josefin Sans", sans-serif;
+  border-radius: 40px;
+  font-size: 20px;
+  transition: 0.5s ease-in-out;
+}
+
+.part_one .aboutus .about {
+  align-items: center;
+  margin-top: 140px;
+  margin-left: 60px;
+  width: fit-content;
+  padding: 20px;
+  font-size: 60px;
+  /* border: 2px salmon solid; */
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.part_one .aboutus .about p {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.left {
+  margin-top: 30px;
+  margin-left: 10px;
+  padding: 0px;
+  width: fit-content;
+  font-size: 80px;
+}
+.initial {
+  color: orangered;
+}
+.initial_1 {
+  font-size: 80px;
+  color: orangered;
+}
+
+.about form {
+  margin-top: 20px;
+  width: 380px;
+  max-width: 100%;
+  position: relative;
+}
+form input[type="email"] {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 130px 14px 15px;
+  border: 2px solid orangered;
+  outline: none;
+  color: #000;
+  border-radius: 30px;
+  position: relative;
+}
+form input[type="submit"] {
+  position: absolute;
+  display: inline-block;
+  outline: none;
+  border: none;
+  padding: 8px 35px;
+  border-radius: 40px;
+  background-color: orangered;
+  color: white;
+  box-shadow: 2px 2px 5px #000;
+  top: 23px;
+  right: 10px;
+  cursor: pointer;
+}
+/*******************************/
+.part_two .profile {
+  margin: 20px 50px;
+  margin-top: 40px;
+  height: 500px;
+  /* border: 2px saddlebrown solid; */
+  display: flex;
+}
+.part_two .profile .profile_desc,
+.part_two .profile .profile_pic {
+  width: 50%;
+  /* border: 2px saddlebrown solid; */
+}
+.part_two .profile .profile_pic img {
+  margin: 50px 170px;
+  width: 240px;
+  filter: grayscale(0.2);
+  border-radius: 10px;
+  box-shadow: 2px 4px 5px #434242;
+}
+.part_two .profile .profile_pic img:hover {
+  transform: scale(1.1);
+  transition: 0.1s ease-in-out;
+}
+.part_two .profile .profile_desc .descp {
+  margin: 60px auto;
+  font-weight: 600;
+  margin-left: 40px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.part_two .profile .profile_desc .descp h1 {
+  font-size: 40px;
+  margin: 20px 0px;
+}
+.part_two .profile .profile_desc .descp p {
+  margin: 20px 0px;
+  font-size: 20px;
+}
+.part_two .profile .profile_desc .descp p span {
+  color: orangered;
+}
+.part_two .profile .profile_desc .descp .para {
+  text-align: left;
+  margin-right: 70px;
+  word-spacing: 5px;
+}
+.part_two .profile .profile_desc .descp button {
+  background-color: orangered;
+  cursor: pointer;
+
+  font-size: 18px;
+  border: none;
+  width: 150px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 40px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.part_three {
+  padding-top: 80px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.part_three .heading {
+  font-size: 30px;
+  height: 20%;
+  /* border: 2px solid; */
+}
+.part_three .heading h1 {
+  text-align: center;
+  align-items: center;
+  margin: 20px;
+}
+.part_three .services {
+  display: flex;
+  margin: 60px 40px;
+}
+.part_three .services .one,
+.part_three .services .two,
+.part_three .services .three {
+  width: 33.33%;
+  height: 45vh;
+  /* border: 2px solid; */
+  margin: 0px 40px;
+  background: #191919;
+  border-radius: 10px;
+}
+.part_three .services .one .icon,
+.part_three .services .two .icon,
+.part_three .services .three .icon {
+  text-align: center;
+  margin: 20px 0px;
+  font-size: 40px;
+  /* border: 2px saddlebrown solid; */
+}
+.part_three .services .one .icon i,
+.part_three .services .two .icon i,
+.part_three .services .three .icon i {
+  padding: 10px;
+  color: orangered;
+}
+.part_three .services .one .head,
+.part_three .services .two .head,
+.part_three .services .three .head {
+  margin: 20px;
+}
+.part_three .services .one .head,
+.part_three .services .two .head,
+.part_three .services .three .head h1 {
+  text-align: center;
+}
+.part_three .services .one .des,
+.part_three .services .two .des,
+.part_three .services .three .des {
+  margin: 20px auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.part_three .services .one .des p,
+.part_three .services .two .des p,
+.part_three .services .three .des p {
+  color: lightcoral;
+  padding: 0px 10px;
+}
+.part_three .services .one .des button,
+.part_three .services .two .des button,
+.part_three .services .three .des button,
+.part_four .part_fone .sec_1 button {
+  font-family: "Josefin Sans", sans-serif;
+  cursor: pointer;
+  margin-top: 20px;
+  height: 40px;
+  width: 130px;
+  background-color: orangered;
+  border: none;
+  border-radius: 40px;
+}
+
+.part_three .services .one .des button a,
+.part_three .services .two .des button a,
+.part_three .services .three .des button a,
+.part_four .part_fone .sec_1 button {
+  font-size: 20px;
+}
+.part_four{
+  overflow: hidden;
+}
+
+.part_four .part_fone {
+  background: #191919;
+}
+.part_four .part_fone .sec_1 ,.part_four .part_ftwo .sec_1 {
+  /* border: 2px solid; */
+  margin: 80px auto;
+  text-align: center;
+  width: 56%;
+  padding: 25px;
+}
+.part_four .part_ftwo .sec_1 button{
+  background:transparent;
+  cursor: pointer;
+  margin: 10px 0px;
+  margin-top: 30px;
+}
+.part_four .part_ftwo .sec_1 button i{
+  color: orangered;
+  font-size: 40px;
+  margin: 0px 5px;
+  
+}
+.copyright{
+  margin-top: 10px;
+  word-spacing: 2px;
+  color: orangered;
+}

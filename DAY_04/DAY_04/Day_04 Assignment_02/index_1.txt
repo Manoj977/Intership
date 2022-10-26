@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>non Sematic Elements</title>
+  </head>
+  <body>
+    <div title="div  header">
+      <h2>Non Sematic Elements</h2>
+    </div>
+    <div title="div Navigation">
+      <h3>Quick Links:</h3>
+      <ul>
+        <li><a href="index.html" target="_blank">Sematic Elements</a></li>
+        <li><a href="index_1.html" target="_blank">non Sematic Elements</a></li>
+        <li><a href="table.html">Table</a></li>
+      </ul>
+    </div>
+    <div
+      title="div aside"
+      style="
+        float: right;
+        width: 50%;
+        padding: 10px;
+        margin: 5px;
+        border: 2px solid black;
+      "
+    >
+      <h2>aside</h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio quas
+        veniam nulla corporis quibusdam delectus magni sequi tempora, placeat,
+        libero ipsum doloribus tenetur ad vero ullam similique blanditiis
+        debitis eius! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Laboriosam, at laudantium! Quod odit laudantium sunt aliquam, autem
+        magni ducimus a. Vel ipsum id laboriosam quibusdam! Quaerat odio placeat
+        fuga illum? Quos iusto officia, alias facilis porro voluptatem optio
+        eveniet est delectus maxime harum earum molestiae modi perspiciatis,
+        sint rem quaerat nulla corporis deleniti doloremque! Delectus reiciendis
+        voluptatem sint quisquam placeat! Recusandae deleniti deserunt corrupti
+        aperiam nobis, molestias commodi voluptate accusamus consequuntur quas
+        eveniet expedita ipsum fugit at accusantium eius eum numquam sapiente
+        ea! Magni illum fugiat quasi, odit commodi dolore? Asperiores, quam
+        magnam. Facere quia rem ut quibusdam dolorem rerum dolores repellat vel.
+        Eum, vero rem. Eum voluptatum nihil corrupti nam vel sed praesentium
+        maiores sapiente, quidem nulla voluptas molestias?
+      </p>
+    </div>
+    <div class="Section_one" title="div Section one">
+      <h2>Paraone</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo
+        tempora sint excepturi velit ducimus asperiores provident, minus dolore
+        possimus est ipsam sit sunt suscipit ratione consectetur praesentium
+        dolor sequi soluta. Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Aperiam praesentium placeat dolor laborum optio vel soluta quo
+        deserunt officia dolores! Ratione quos alias soluta voluptates illo
+        quisquam, error corporis veritatis officia incidunt facilis porro
+        eligendi rerum sunt blanditiis culpa laborum. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Iusto quibusdam, ipsam consequatur
+        voluptatibus quidem voluptate tenetur ex, reprehenderit, quia qui modi
+        sint voluptates ea aut! Magnam, sequi ea dolorum debitis pariatur iure
+        cupiditate in laboriosam, hic nihil harum, repellat enim.
+      </p>
+    </div>
+    <hr />
+    <div class="Section_two" title="div section two">
+      <h2>Paratwo</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo
+        tempora sint excepturi velit ducimus asperiores provident, minus dolore
+        possimus est ipsam sit sunt suscipit ratione consectetur praesentium
+        dolor sequi soluta. Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Sit similique nihil dolorem impedit maxime labore consectetur!
+        Quaerat ullam nobis amet quos, perspiciatis quibusdam optio cupiditate
+        rem consectetur inventore quia obcaecati. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Consequatur porro eum, pariatur animi
+        dolor labore ad deserunt, harum modi consectetur nihil facere nemo,
+        reiciendis beatae necessitatibus earum illo ea accusantium optio facilis
+        corporis dolorum quis itaque aspernatur. Dolore, sequi aspernatur.
+      </p>
+    </div>
+    <hr />
+    <div class="Section_footer" title="div footer">
+      <h2>Address</h2>
+      <p> 4, C, Naaz Cinema Bldg, Lamington Rd, Lamington Road,Mumbai.</p>
+    </div>
+  </body>
+</html>

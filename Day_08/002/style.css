@@ -1,0 +1,16 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul li a {
+  display: block;
+  padding: 5px;
+  margin: 10px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 28px;
+  color: wheat;
+  background-color: rgb(121, 73, 10);
+  width: 500px;
+}

@@ -1,0 +1,152 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: poppins, "sans-serief";
+}
+
+body {
+  background: linear-gradient(
+    to top right,
+    rgb(180, 78, 78),
+    rgb(100, 100, 169)
+  );
+}
+
+.topnavigation {
+  background-color: rgb(236, 205, 166);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 25vh;
+}
+.topnavigation h2 {
+  margin: 10px;
+  font-size: 50px;
+  color: cadetblue;
+  text-shadow: 1px 1px 3px salmon;
+  animation-name: head;
+  animation-duration: 2s;
+}
+@keyframes head {
+  0% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.top ul {
+  display: flex;
+}
+nav {
+  margin: 20px 0px;
+}
+
+nav .top {
+  width: 100vw;
+}
+nav .top ul {
+  display: block;
+  text-align: center;
+}
+nav .top ul li {
+  display: inline;
+  padding: 20px;
+  list-style-type: none;
+  padding: 0px 30px;
+}
+nav .top ul li a {
+  text-decoration: none;
+  color: rgb(50, 20, 220);
+  font-weight: 600;
+}
+.sidenavigation {
+  position: fixed;
+  top: 25%;
+  left: 0%;
+  width: 20vw;
+  height: 60vh;
+  animation-name: sidebar;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes sidebar {
+  from {
+    scale: 0.9;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+.sidenavigation ul h2 {
+  padding: 10px;
+}
+.sidenavigation ul li {
+  margin: 10px 0px;
+  list-style: none;
+}
+.sidenavigation ul li a {
+  text-decoration: none;
+  text-align: center;
+  color: wheat;
+  display: block;
+  background-color: maroon;
+  border-radius: 20px;
+  margin-left: 3px;
+  font-weight: bold;
+  padding: 10px;
+  margin-right: 30px;
+  border-right: 2px solid;
+  border-radius: 30px;
+}
+
+.sidenavigation ul li a:hover {
+  text-shadow: 3px 3px black;
+  font-size: 20px;
+}
+.section {
+  margin-top: 13%;
+}
+.section .section_heading {
+  margin-left: 20%;
+  text-align: center;
+  text-decoration: underline;
+  animation-name: heading;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  transition: ease-in-out;
+}
+@keyframes heading {
+  0% {
+    transform: rotate(20deg);
+  }
+
+  50% {
+    transform: rotate(20deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.section p {
+  display: block;
+  margin-left: 280px;
+  text-align: justify;
+  padding: 25px;
+}
+.section p::selection {
+  color: blueviolet;
+  background-color: black;
+}
+footer address {
+  margin: 30px;
+  margin-left: 30px;
+}

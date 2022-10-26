@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Registration Form</title>
+    <meta name="description" content="User Registration">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            Registration
+        </div>
+
+        <form action="#" method="post">
+            <div class="user-details">
+                <table>
+                    <tr>
+                        <td>
+                            <Label class="details">Full Name</Label>
+                            <input type="text" placeholder="Enter your name" required />
+                        </td>
+                        <td>
+                            <Label class="details">UserName</Label>
+                            <input type="text" placeholder="Enter your Username" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <Label class="details">Email</Label>
+                            <input type="email" placeholder="Enter your email" required />
+                        </td>
+
+                        <td>
+                            <Label for="dob" class="details">Date of Birth</Label>
+                            <input id="dob" type="date" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <Label for="phnenum" class="details">Phone Number</Label>
+                            <input id="phnenum" type="number" placeholder="Enter your Phone Number" required />
+                        </td>
+                        <td>
+                            <Label for="address" class="details">Address</Label><br>
+                            <textarea id="address" name="Address" rows="3" cols="40"
+                                style="border: 2px solid #4e4ede;border-radius:5px;" placeholder="Enter Your Address"
+                                required></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <Label class="details"> Photo</Label>
+                            <input type="file" style="border:none;" accept="image/png, image/jpg, image/jpeg"
+                                placeholder="Enter your Username" required />
+                        </td>
+                        <td>
+                            <Label for="education" class="details">Educational Qualification</Label><br>
+                            <select name="education" id="education" cols="40"
+                                style="border: 2px solid #4e4ede;border-radius:5px; width: 240px; height: 30px;cursor: pointer;">
+                                <option value="Select Option">Select Option</option>
+                                <option value="B.E">B.E</option>
+                                <option value="B.Tech">B.Tech</option>
+                                <option value="Bsc">Bsc</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <Label class="gender-title">Gender</Label>
+                            <div class="gender-mention" >
+                                <input type="radio" class="gender-name-input" name="gender" id="male" />
+                                <label for="male" class="gender-name-label">Male</label>
+                                <input type="radio" class="gender-name-input" name="gender" id="female" />
+                                <label for="female" class="gender-name-label">Female</label>
+                                <input type="radio" class="gender-name-input" name="gender" id="not_to_say" />
+                                <label for="not_to_say" class="gender-name-label">Prefer Not to Say</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <Label for="pass" class="details">Password</Label>
+                            <input id="pass" type="password" placeholder="Enter your Password" required />
+                        </td>
+
+                        <td>
+                            <Label for="cnfmpass" class="details">Confirm Password</Label>
+                            <input id="cnfmpass" type="password" placeholder="Repeat your Password" required />
+                        </td>
+                    </tr>
+                    <tr >
+                        <td colspan="2">
+                            <div class="button">
+                                <input class="Register" type="submit" value="Click to Register" />
+
+                            </div>
+                       
+                            <div class="button">
+                                <input class="Reset" type="reset" value="Reset" />
+                            </div>
+                           <input type="date" name="" id="">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+
+
+    </div>
+</body>
+
+</html>

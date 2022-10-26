@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+div {
+  float: left;
+  width: 33.33%;
+  height: 100vh;
+  padding: 20px;
+}
+div p {
+  margin-top: 190px;
+}
+.one {
+  background-color: #ff7722;
+}
+.two {
+  background-color: white;
+}
+.three {
+  background-color: green;
+}

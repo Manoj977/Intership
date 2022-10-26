@@ -1,0 +1,22 @@
+div h1{
+    text-align: center;
+}
+.inline{
+    display: inline;
+    background-color: violet;
+}
+
+.block{
+    display: block;
+    background-color: rgb(97, 250, 219);
+}
+aside{
+    border: 2px solid;
+    width: 30vw;
+}
+figure{
+    text-align: center;
+}
+figure img{
+width:30vw;
+}

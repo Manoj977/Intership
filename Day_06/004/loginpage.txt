@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <fieldset>
+      <div id="logo">
+        <div class="logo_image">
+          <img
+            src="https://static3.depositphotos.com/1001976/160/i/600/depositphotos_1605376-stock-photo-golden-shield.jpg"
+            alt="logo"
+          />
+        </div>
+        <form action="#" method="get">
+          <table>
+            <div>
+              <tr>
+                <th>
+                  <label>Username : </label>
+                </th>
+                <td>
+                  <input
+                    type="text"
+                    placeholder="Enter Username"
+                    name="username"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label>Password : </label>
+                </th>
+                <td>
+                  <input
+                    type="password"
+                    placeholder="Enter Password"
+                    name="password"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="2">Forgot <a href="#"> password </a></td>
+              </tr>
+              <tr>
+                <td style="background-color:rgb(215, 250, 230);padding: 5px;border-radius: 6px; border: none;"  >
+                  <button style="background-color:rgb(215, 250, 230);border: none;" type="submit">Login</button>
+                </td>
+                <td><input type="checkbox" /> Remember me</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="2" > <a style="background-color:antiquewhite;padding: 5px;border-radius: 6px;" href="signup.html" target="_blank"> Click to Register </a></td>
+              </tr>
+            </div>
+          </table>
+        </form>
+      </div>
+    </fieldset>
+  </body>
+</html>

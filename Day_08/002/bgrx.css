@@ -1,0 +1,9 @@
+
+.bgrx{
+    margin-top: 40px;
+    background: url("https://farm9.staticflickr.com/8030/7980451883_aaa7da602c_b.jpg");
+    background-repeat: repeat-x;
+    width: 100vw;
+    height: 100vh;
+    margin: 20px auto;
+}

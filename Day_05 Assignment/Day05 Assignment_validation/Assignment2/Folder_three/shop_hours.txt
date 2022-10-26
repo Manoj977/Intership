@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop hours</title>
+  </head>
+  <body>
+    <fieldset id="tag1" style="width: 700px; margin: auto">
+      <header>
+        <h1>Little Taco Shop Hours</h1>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="../Folder_one/home.html#aboutus">About Us</a></li>
+          <li><a href="../Folder_one/home.html#menu">Our Menu</a></li>
+          <li><a href="../Folder_three/shop_hours.html">Store Hours</a></li>
+          <li><a href="../Folder_two/contact_us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <section>
+        <div>
+          <figure>
+            <img
+              style="width: 500px"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Carnitas.jpg/1024px-Carnitas.jpg"
+              alt="Tacos.jpg"
+            />
+            <figcaption>Tacos</figcaption>
+          </figure>
+        </div>
+        <hr />
+        <div>
+          <address>
+            We are open 7 days a week!<br /><br />
+            Sunday-Thursday <br />
+            11am-9pm <br />
+            Friday-Saturday <br />
+            11am-11pm
+          </address>
+          <div>
+            <a href="#tag1">Back to top</a>
+          </div>
+        </div>
+        <hr />
+        <footer>
+          <p>Copyright&copy; The Little Taco Shop</p>
+        </footer>
+      </section>
+    </fieldset>
+  </body>
+</html>

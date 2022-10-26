@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <h3>Emerland</h3>
+        <img
+          id="logo"
+          src="https://cdn2.vectorstock.com/i/1000x1000/32/91/luxury-boutique-b-letter-logo-classy-elegant-gold-vector-31753291.jpg"
+          alt="logo"
+        />
+      </div>
+    </header>
+    <hr />
+    <nav>
+      <h2>Navigation bar</h2>
+      <div class="navigation">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Products</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Career</a></li>
+        </ul>
+      </div>
+      <hr />
+    </nav>
+    <aside>
+      <div>
+        <h2>Click here</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis,
+          error?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni
+          officia nemo sapiente amet. Tenetur aut porro illo dicta voluptatum.
+          Est!
+        </p>
+      </div>
+    </aside>
+    <section>
+      <div>
+        <h2>Para One</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ut
+          laboriosam illum, cupiditate ratione et ex voluptatibus soluta, cumque
+          qui minima quas! Voluptatum laboriosam neque beatae accusamus
+          voluptatem esse maiores iste ut illo velit qui et in iusto ipsum
+          repellendus laudantium, itaque quae autem, quia, consectetur modi
+          veniam sapiente. Consectetur ullam quisquam eveniet corrupti impedit
+          explicabo recusandae adipisci, minus non.
+        </p>
+        <hr />
+      </div>
+      <div>
+        <h2>Para Two</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium,
+          repellendus a ex ad incidunt reiciendis minus et saepe? A reiciendis
+          iure unde nostrum dolores debitis cupiditate, recusandae maxime
+          molestiae quaerat?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+          architecto. Quidem, sunt illum eaque veritatis fuga optio. Doloremque,
+          reprehenderit consequatur! Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Ratione ex ullam necessitatibus, animi odio corrupti
+          aliquam ad optio dignissimos distinctio quam quaerat blanditiis
+          eveniet enim dolorum aspernatur a praesentium ut mollitia eum libero?
+          Libero repudiandae eligendi provident aperiam facilis facere!
+        </p>
+        <hr />
+      </div>
+    </section>
+    <article>
+      <div>
+        <h2>Summary</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
+          sequi fuga minus asperiores distinctio atque, sapiente aut impedit
+          aliquam consequatur. Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Quod veniam eaque, in sunt voluptatibus harum quia
+          reprehenderit praesentium aspernatur corporis eveniet nesciunt maxime
+          amet asperiores eum iste consequuntur itaque accusantium!
+        </p>
+      </div>
+      <hr />
+    </article>
+    <footer>
+      <address>
+        <abbr title="22, Kovalan Nagar 2nd St, T V S Nagar, Tamil Nadu 625003"
+          >Zlendo Technologies Private Limited &copy;
+        </abbr>
+      </address>
+    </footer>
+  </body>
+</html>

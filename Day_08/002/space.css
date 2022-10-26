@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+}
+
+.space{
+    margin-top: 40px;
+    background: url("image.jpg");
+    background-repeat: space;
+    width: 100vw;
+    height: 100vh;
+    margin: 20px auto;
+}
+
+.space p{
+    color: antiquewhite;
+    width: 90%;
+    padding: 20px;
+}

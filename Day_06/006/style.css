@@ -1,0 +1,26 @@
+table {
+    text-align: center;
+    border-left: 2px solid gray;
+    border-top: 2px solid gray;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+  }
+  
+  th, td ,tr {
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-right: 2px solid rgb(153, 152, 152);
+    border-bottom: 2px solid rgb(164, 164, 164);
+    padding: 4px;
+  }
+
+  .clr_yellow{
+    background-color: #ffffcc;
+  }
+  .clr_blue{
+    background-color: #ccccff;
+  }
+
+  .clr_green{
+    background-color: #ccffcc;
+  }

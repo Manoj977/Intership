@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <fieldset id="tag1" style="width: 700px; margin: auto">
+      <header>
+        <h1>Welcome to The Mocca coffee Shop</h1>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="../Assignment3/page_one.html#aboutus">About Us</a></li>
+          <li><a href="../Assignment3/page_one.html#menu">Our Menu</a></li>
+          <li><a href="../Assignment3/page_two.html">Products</a></li>
+          <li><a href="page_three.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <section>
+        <div>
+          <figure>
+            <img
+              style="width: 500px"
+              src="https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg"
+              alt="coffee.jpg"
+            />
+            <figcaption>cappuccino</figcaption>
+          </figure>
+        </div>
+        <div>
+          <h2>Our Contact Form</h2>
+          <form action="#" method="get">
+            <fieldset>
+              <legend>Send Us A Message</legend>
+              <label for="Name"> Name: </label>
+              <input id="Name" type="text" placeholder="your name" />
+              <br /><br />
+              <label for="Email"> Email: </label>
+              <input id="Email" type="email" placeholder="your mail" />
+              <br /><br />
+              <label>Your Message:</label><br />
+              <textarea rows="8" cols="30"></textarea>
+            </fieldset>
+            <input type="button" value="Send" />
+            <input type="reset" value="Reset" />
+          </form>
+        </div>
+        <div>
+          <h2>Our Location</h2>
+          <address>
+            Shop No 4, Sakti Sadan, Lamington Road, Lamington Road<br />
+            phone: <a href="">02223078725</a>
+          </address>
+          <br />
+          <div>
+            <a href="#tag1">Back to top</a>
+          </div>
+          <hr />
+        </div>
+        <footer>
+          <p>Copyright&copy; The Mocca coffee Shop</p>
+        </footer>
+      </section>
+    </fieldset>
+  </body>
+</html>

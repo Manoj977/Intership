@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins, "sans-serif";
+}
+body {
+  overflow-x: hidden;
+}
+table {
+  margin: 10px auto;
+}
+table {
+  border: 2px solid;
+  padding: 10px;
+  background-color: lemonchiffon;
+  opacity: 0.6;
+  border-radius: 10px;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  width: 20px;
+  height: 16px;
+}
+input[type="range"] {
+  width: 90px;
+  height: 10px;
+}
+th {
+  text-align: right;
+  padding: 10px;
+}
+
+input,
+select {
+  width: 30vw;
+  height: 6vh;
+  margin: 10px;
+}
+
+th h1 {
+  text-transform: capitalize;
+}
+
+.survey_form {
+  background: url("https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2FsbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80");
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.survey_form section .form {
+  padding: 10px;
+  border: none;
+}

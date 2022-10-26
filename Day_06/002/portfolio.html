@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="heading_1">
+        <h1>Develop<span>er</span></h1>
+      </div>
+      <div class="heading_2">
+        <nav>
+          <ul>
+            <li>
+              <a href="#aboutme"> About me</a>
+            </li>
+            <li><a href="#projects"> Projects</a></li>
+            <li><a href="#contactus"> Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section>
+      <div class="section">
+        <div class="section_1">
+          <img src="MyPassport.jpg" alt="passport.jpg" />
+        </div>
+        <div class="section_2" id="aboutme">
+          <h2>S.Manoj</h2>
+          <p>Professional Web Developer</p>
+          <div class="button">
+            <button>
+              <a
+                href="https://drive.google.com/file/d/1BorON7LEz7Uydi9WgesVe51JJTidH8zZ/view?usp=sharing"
+                target="_blank"
+                >Resume</a
+              >
+            </button>
+            <button>
+              <a href="#projects">My Projects</a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div id="projects">
+          <h2>Projects</h2>
+          <ul style="display: grid">
+            <li>
+              1. Online E-Commerce Website:<br />
+              <p style="color: white; margin-top: 0px; margin-left: 10px">
+                <span style="color: skyblue">DESCRIPTION:</span>
+                Build an E-Commerce Website Using REACT JS WITH FIREBASE GOOGLE
+                AUTHENTICATION, TAILWIND CSS. <br />
+                <span style="color: skyblue">WEBSITE:</span>
+                <a
+                  href="https://emerlandonlineshopping.web.app/"
+                  style="text-shadow: 1px 2px 3px white"
+                  >Ecommerce Website click me</a
+                >
+              </p>
+            </li>
+            <li>
+              2. Google Keep Notes (Clone):<br />
+              <p style="color: white; margin-top: 0px; margin-left: 10px">
+                <span style="color: skyblue">DESCRIPTION:</span>
+                Inspired by Keep Notes I Build a website Using REACT JS, VANILA
+                CSS.<br />
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <fieldset>
+        <legend id="contactus">Contact Us</legend>
+        <form action="action_page.php">
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Your name.."
+          />
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email.."
+          />
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Write your feedback"
+            style="height: 200px;"
+          ></textarea>
+          <br />
+          <input type="submit" value="Submit" />
+        </form>
+      </fieldset>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  font-family: "poppins", sans-serif;
+}
+fieldset {
+  border: 2px solid;
+  border-radius: 6px;
+}
+#heading {
+  text-align: center;
+  font-size: 44px;
+  color: darkmagenta;
+  text-shadow: 2px 3px 4px lightslategray;
+}
+
+.aside {
+  border-left: 1px solid green;
+  border: 2px solid;
+  height: 320px;
+  width: 420px;
+  margin-top: 30px;
+  background-color: lightgray;
+}
+.inner_aside{
+    margin:10vh;
+    margin-top: 20vh;;
+}
+.aside label, .aside input{
+    padding: 10px;
+}
+
+table,
+th,
+tr,
+td {
+  padding: 6px;
+}
+th {
+  text-align: right;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+  width: 30vw;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-left: 10px;
+}
+
+th,
+td,
+select {
+  width: 30vw;
+}

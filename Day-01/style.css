@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(140deg, #6bc7ad, #4e4ede);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.container {
+    background-color: #fff;
+    max-width: 700px;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 3px 6px 4px rgb(77, 76, 76);
+}
+
+.container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    width: 100%;
+}
+
+.container .title::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 35px;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(140deg, #6bc7ad, #4e4ede);
+}
+
+input,
+label {
+    cursor: pointer;
+    transition: ease-in-out;
+}
+
+.container form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-details table tr td {
+    padding: 10px;
+}
+
+.user-details table tr td Label {
+    color: #353434;
+}
+
+.user-details table tr td input {
+    height: 35px;
+    width: 100%;
+    border: 2px solid #4e4ede;
+    border-radius: 5px;
+}
+
+.user-details table tr td input:focus {
+    border: 2px solid rgb(237, 177, 99)
+}
+
+
+.user-details table tr td .gender-mention {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    cursor: pointer;
+
+}
+
+.user-details table tr td .gender-mention .gender-name-input {
+    height: fit-content;
+    width: fit-content;
+    margin: 0px 20px;
+    cursor: pointer;
+}
+
+.button {
+    align-items: center;
+    justify-content: center;
+}
+
+.button .Register,
+.button .Reset {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.button .Register {
+    background-color: #6bc799;
+
+}
+
+.button .Reset {
+    background-color: rgb(207, 51, 51);
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        display: grid;
+    }
+
+    .container {
+        max-width: 250px;
+    }
+
+    .container table tr td {
+        display: grid;
+    }
+
+    .button .Register,
+    .button .Reset {
+        max-width: 270px;
+    }
+
+}

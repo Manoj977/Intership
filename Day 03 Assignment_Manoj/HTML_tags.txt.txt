@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Tags Title</title>
+  </head>
+  <body>
+    <body>
+      <h1>HTML TAGS</h1>
+      <hr />
+
+      <!--a TAG-->
+      <h1>a TAG:</h1>
+      <a href="https://www.google.com/ " target="_blank ">Google</a><br /><br />
+      <hr />
+
+      <!--address TAG-->
+      <h1>Address Tag</h1>
+      <address>
+        zlendo technologies pvt ltd. 22, Kovalan Nagar 2nd St, T V S Nagar,
+        Tamil Nadu 625003
+      </address>
+      <hr />
+
+      <!--Article-->
+      <h1>Article Tag</h1>
+      <article>
+        <h1>Article Tag</h1>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s
+        </p>
+      </article>
+      <hr />
+
+      <!--abbr-->
+      <h1>Abbr Tag</h1>
+      <abbr title="22, Kovalan Nagar 2nd St, T V S Nagar, Tamil Nadu 625003">
+        Zlendo Technologies Pvt ltd
+      </abbr>
+      <hr />
+      <!--aside-->
+      <h1>aside Tag</h1>
+      <aside style="width: 60%; float: right">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s
+      </aside>
+      <br /><br /><br /><br />
+      <hr />
+
+      <!--B I U Tag-->
+      <h1>B I U TAG</h1>
+      <p>
+        Lorem <b>Ipsum is simply</b> dummy text <i>of the printing</i> and
+        typesetting industry.
+        <u>Lorem Ipsum has been the industry's</u> standard dummy text ever
+        since the 1500s
+      </p>
+      <hr />
+      <!--UL Tag-->
+      <h1>UL Tag</h1>
+      <ul>
+        Google
+      </ul>
+      <ul>
+        Facebook
+      </ul>
+      <ul>
+        Twitter
+      </ul>
+      <hr />
+      <h1>LI Tag</h1>
+      <li>Google</li>
+      <li>Facebook</li>
+      <li>Twitter</li>
+      <hr />
+      
+      <!--BDO stands for Bi-Directional Override.-->
+      <h1>BDO</h1>
+      <p>
+        <b>Right To Left:</b
+        ><bdo dir="rtl"> This text will go right-to-left. </bdo>
+      </p>
+      <p>
+        <b>Left to Right:</b
+        ><bdo dir="ltr"> This text will go left-to-right. </bdo>
+      </p>
+      <hr />
+    </body>
+  </body>
+</html>

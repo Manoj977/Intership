@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="survey_form">
+      <section>
+        <div class="form">
+          <form action="#" method="get">
+            <table>
+              <thead>
+                <caption>
+                  <h1>Survey Form</h1>
+                </caption>
+              </thead>
+              <tbody>
+                <tr>
+                  <th colspan="2"><label for="name">Name:</label></th>
+                  <td colspan="2">
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder="Enter your name"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2">
+                    <label>Gender:</label>
+                  </th>
+                  <td>
+                    <input type="radio" name="gender" id="male" />
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" />
+                    <label for="female">Female</label>
+                    <input
+                      type="radio"
+                      class="gender-name-input"
+                      name="gender"
+                      id="not_to_say"
+                    />
+                    <label for="not_to_say">Prefer Not to Say</label>
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2">
+                    <label for="dob" class="details">Date of Birth</label>
+                  </th>
+                  <td colspan="2">
+                    <input id="dob" type="date" required />
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2"><label for="email">Email:</label></th>
+                  <td colspan="2">
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Enter your mail id"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2"><label for="phne">Phone Number:</label></th>
+                  <td colspan="2">
+                    <input
+                      type="tel"
+                      name="phne"
+                      id="phne"
+                      placeholder="Enter your Phonenumber"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2">
+                    <label for="education" class="details"
+                      >Educational Qualification</label
+                    >
+                  </th>
+
+                  <td colspan="2">
+                    <select
+                      name="education"
+                      id="education"
+                      style="border-radius: 5px; cursor: pointer"
+                    >
+                      <option value="Select Option">Select Option</option>
+                      <option value="B.E">B.E</option>
+                      <option value="B.Tech">B.Tech</option>
+                      <option value="Bsc">Bsc</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2">
+                    <label for="college-search">College Name:</label>
+                  </th>
+                  <td colspan="2">
+                    <input
+                      type="search"
+                      id="college-search"
+                      name="college"
+                      placeholder="Enter your College name"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2">Language:</th>
+                  <td colspan="2">
+                    <input
+                      type="range"
+                      id="tamil"
+                      name="tamil"
+                      min="0"
+                      max="10"
+                    />
+                    <label for="tamil">Tamil</label>
+                    <input
+                      type="range"
+                      id="english"
+                      name="english"
+                      min="0"
+                      max="10"
+                    />
+                    <label for="english">English</label>
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2">Hobbies</th>
+                  <td colspan="2">
+                    <input type="checkbox" name="Singing" id="Singing" />
+                    <label for="Singing">Singing</label><br />
+                    <input type="checkbox" name="Dancing" id="Dancing" />
+                    <label for="Dancing">Dancing</label><br />
+                    <input
+                      type="checkbox"
+                      name="Books Reading"
+                      id="Books_Reading"
+                    />
+                    <label for="Books_Reading">Books Reading</label><br />
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2">
+                    <label for="favcolor"> your Favorite Color:</label>
+                  </th>
+                  <td colspan="2">
+                    <input type="color" id="favcolor" name="favcolor" />
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2">
+                    <label for="movie"> FavoriteMovie:</label>
+                  </th>
+                  <td colspan="2">
+                    <input
+                      type="text"
+                      name="movie"
+                      id="movie"
+                      placeholder="Enter your Favorite movie"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2">
+                    <label for="sports_person">Sports_person:</label>
+                  </th>
+                  <td colspan="2">
+                    <input
+                      type="text"
+                      name="sports_person"
+                      id="sports_person"
+                      placeholder="Enter your Favorite sports_person"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2">
+                    <input
+                    style="background-color: green;border-radius:10px;border:none;"
+                      class="Register"
+                      type="submit"
+                      value="Click to Register"
+                    />
+                  </th>
+                  <th colspan="2">
+                    <input 
+                    style="background-color: orange;border-radius:10px;border:none;" class="Reset" type="reset" value="Reset" />
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

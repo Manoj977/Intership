@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+  <body>
+    <fieldset>
+      <div class="logo_image">
+        <img
+          src="https://static3.depositphotos.com/1001976/160/i/600/depositphotos_1605376-stock-photo-golden-shield.jpg"
+          alt="logo"
+        />
+      </div>
+      <table>
+        <form action="#" method="get">
+          <tr>
+            <th>
+              <label> Firstname </label>
+            </th>
+            <td>
+              <input type="text" name="firstname" size="15" required />
+            </td>
+          </tr>
+          <tr>
+            <th><label> Lastname: </label></th>
+            <td>
+              <input type="text" name="middlename" size="1" required />
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Educational<br />
+              Qualification:
+            </th>
+            <td>
+              <select required>
+                <option value="Course">Course</option>
+                <option value="BCA">BCA</option>
+                <option value="BBA">BBA</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="MBA">MBA</option>
+                <option value="MCA">MCA</option>
+                <option value="M.Tech">M.Tech</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th><label for=""> Gender : </label></th>
+            <td>
+              <input type="radio" name="gender" /> Male <br />
+              <input type="radio" name="gender" /> Female <br />
+              <input type="radio" name="gender" /> Nothing to Say
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="">Phone:</label>
+            </th>
+            <td>
+              <input type="text" name="country code" value="+91" size="2" />
+              <input type="tel" name="phone" size="10" />
+            </td>
+          </tr>
+          <tr>
+            <th><label for="email"> Email: </label></th>
+            <td>
+              <input type="email" name="" id="" />
+            </td>
+          </tr>
+          <tr>
+            <th><label for="pass"> Password: </label></th>
+            <td><input type="password" name="password" id="pass" /></td>
+          </tr>
+          <tr>
+            <th><label for="repass">Re-type password: </label></th>
+            <td>
+              <input type="Password" id="repass" name="repass" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" value="Submit" />
+            </td>
+            <td>
+              <input type="reset" value="reset" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <a
+                style="
+                  margin-left: 80px;
+                  background-color: antiquewhite;
+                  padding: 5px;
+                  border-radius: 6px;
+                "
+                href="loginpage.html"
+                target="_blank"
+              >
+                Already Have a account
+              </a>
+            </td>
+          </tr>
+        </form>
+      </table>
+    </fieldset>
+  </body>
+</html>

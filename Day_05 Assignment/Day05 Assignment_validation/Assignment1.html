@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 05 Assignment 1</title>
+    <style>
+      table {
+        font-family: "poppins", sans-serif;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        margin: 10px;
+        padding: 20px;
+        border-collapse: collapse;
+      }
+      input[type="color"] {
+        width: 180px;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Day 05 Assignment 1</h1>
+      <hr />
+    </header>
+    <nav>
+      <h3>Quick Links</h3>
+      <ul>
+        <li>
+          <a href="Assignment1.html">Assignment one</a>
+        </li>
+        <li><a href="./Assignment2/Folder_one/home.html">Assignment two</a></li>
+        <li><a href="Assignment3.html">Assignment three</a></li>
+      </ul>
+      <hr />
+    </nav>
+    <section>
+      <div>
+        <form action="#" method="get">
+          <div>
+            <table>
+              <caption>
+                <h2>Registration Form</h2>
+              </caption>
+              <tr>
+                <th>
+                  <label for="today">Date:</label>
+                </th>
+
+                <td>
+                  <input
+                    type="date"
+                    id="today"
+                    name="today date"
+                    value="2022-10-14"
+                    min="2020-01-01"
+                    max="2022-10-14"
+                  />
+                </td>
+
+                <td rowspan="2" style="float: right; border: none">
+                  <input
+                    type="image"
+                    src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-High-Quality-Image.png"
+                    alt="Submit"
+                    width="200"
+                    height="200"
+                  />
+                </td>
+                <th><label>User Registration</label></th>
+              </tr>
+              <tr>
+                <th>Time:</th>
+                <td>
+                  <input
+                    type="time"
+                    id="appt"
+                    name="appt"
+                    min="09:00"
+                    max="18:00"
+                    required
+                  />
+                </td>
+                <th>
+                  <label for="url">Resume URL</label>
+                </th>
+                <td>
+                  <input
+                    type="url"
+                    name="url"
+                    id="url"
+                    placeholder="Resume URL"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label>Full Name</label>
+                </th>
+                <td>
+                  <input
+                    type="text"
+                    placeholder="Enter your full name"
+                    autofocus
+                    required
+                  />
+                </td>
+                <th>
+                  <label>User Name</label>
+                </th>
+                <td>
+                  <input
+                    type="text"
+                    placeholder="Enter your user name"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label>Email</label>
+                </th>
+                <td>
+                  <input type="email" placeholder="Enter your email" required />
+                </td>
+                <th>
+                  <label for="dob" class="details">Date of Birth</label>
+                </th>
+                <td>
+                  <input id="dob" type="date" required />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="phnenum" class="details">Phone Number</label>
+                </th>
+                <td>
+                  <input
+                    id="phnenum"
+                    type="number"
+                    placeholder="+91"
+                    required
+                  />
+                </td>
+                <th><label for="address">Address</label><br /></th>
+                <td>
+                  <textarea
+                    id="address"
+                    name="Address"
+                    rows="3"
+                    cols="22"
+                    style="
+                      border: 1px solid rgb(113, 113, 113);
+                      border-radius: 5px;
+                    "
+                    placeholder="Enter Your Address"
+                    required
+                  ></textarea>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="photo"> Photo</label>
+                </th>
+                <td>
+                  <input
+                    type="file"
+                    id="photo"
+                    style="border: none"
+                    accept="image/png, image/jpg, image/jpeg"
+                    required
+                  />
+                </td>
+                <th>
+                  <label for="education" class="details"
+                    >Educational Qualification</label
+                  >
+                </th>
+
+                <td>
+                  <select
+                    name="education"
+                    id="education"
+                    style="
+                      border-radius: 5px;
+                      width: 170px;
+                      height: 30px;
+                      cursor: pointer;
+                    "
+                  >
+                    <option value="Select Option">Select Option</option>
+                    <option value="B.E">B.E</option>
+                    <option value="B.Tech">B.Tech</option>
+                    <option value="Bsc">Bsc</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">College Name</th>
+                <td colspan="2">
+                  <label for="college-search">Search the college:</label>
+                  <input
+                    type="search"
+                    id="college-search"
+                    name="college"
+                    placeholder="Enter your College name"
+                  />
+                  <button>Search</button>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">
+                  <label for="week">Joining Week</label>
+                </th>
+                <td colspan="2">
+                  <input type="week" id="week" required />
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">
+                  <label>Gender</label>
+                </th>
+                <td colspan="2">
+                  <div>
+                    <input type="radio" name="gender" id="male" />
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" />
+                    <label for="female">Female</label>
+                    <input
+                      type="radio"
+                      class="gender-name-input"
+                      name="gender"
+                      id="not_to_say"
+                    />
+                    <label for="not_to_say">Prefer Not to Say</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">Hobbies</th>
+                <td colspan="2">
+                  <input type="checkbox" name="Singing" id="Singing" />
+                  <label for="Singing">Singing</label><br />
+                  <input type="checkbox" name="Dancing" id="Dancing" />
+                  <label for="Dancing">Dancing</label><br />
+                  <input
+                    type="checkbox"
+                    name="Books Reading"
+                    id="Books_Reading"
+                  />
+                  <label for="Books_Reading">Books Reading</label><br />
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">Language:</th>
+                <td>
+                  <input
+                    type="range"
+                    id="tamil"
+                    name="tamil"
+                    min="0"
+                    max="10"
+                  />
+                  <label for="tamil">Tamil</label>
+                </td>
+                <td colspan="2">
+                  <input
+                    type="range"
+                    id="english"
+                    name="english"
+                    min="0"
+                    max="10"
+                  />
+                  <label for="english">English</label>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="pass">Password</label>
+                </th>
+                <td>
+                  <input
+                    id="pass"
+                    type="password"
+                    placeholder="Enter your Password"
+                    required
+                  />
+                </td>
+                <th>
+                  <label for="cnfmpass">Confirm Password</label>
+                </th>
+                <td>
+                  <input
+                    id="cnfmpass"
+                    type="password"
+                    placeholder="Repeat your Password"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">
+                  <label for="favcolor">
+                    Password Hint: {Choose your Favorite Color}</label
+                  >
+                </th>
+                <td colspan="2">
+                  <input
+                    type="color"
+                    id="favcolor"
+                    name="favcolor"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">
+                  <input
+                    class="Register"
+                    type="submit"
+                    value="Click to Register"
+                  />
+                </th>
+                <th colspan="2">
+                  <input class="Reset" type="reset" value="Reset" />
+                </th>
+              </tr>
+            </table>
+          </div>
+        </form>
+      </div>
+    </section>
+    <hr />
+    <footer>
+      <address>
+        Assignment1 Completed <br />
+        Manoj S<br />
+        intern<br />
+        Zlendo &copy;,Madurai-625003.
+      </address>
+    </footer>
+  </body>
+</html>

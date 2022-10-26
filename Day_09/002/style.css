@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+.pseudo_element h2,
+.pseudo_classes h2 {
+  margin: 10px;
+  text-align: center;
+}
+.pseudo_element ul li {
+  margin: 40px;
+  list-style: none;
+}
+.pseudo_element ul li h2,
+.pseudo_classes ul li h2 {
+  background-color: cadetblue;
+}
+.pseudo_element ul li p {
+  margin: 10px auto;
+  width: 80vw;
+  text-align: justify;
+}
+
+.pseudo_classes ul li a {
+  display: block;
+  margin-left: 30px;
+  font-size: 30px;
+}
+
+.pseudo_element ul li p.before::before {
+  content: "Hi Buddy ";
+  font-size: 30px;
+  color: blueviolet;
+  font-weight: 700;
+}
+
+.pseudo_element ul li p.after::after {
+  content: " Thank you🖖";
+  font-size: 30px;
+  color: goldenrod;
+  text-shadow: 2px 3px 5px salmon;
+  font-weight: 700;
+}
+
+.pseudo_element ul li p.firstline::first-line {
+  font-size: 40px;
+  color: forestgreen;
+}
+
+.pseudo_element ul li p.firstletter::first-letter {
+  font-size: 60px;
+  color: chocolate;
+}
+
+.pseudo_element ul li p.selection::selection {
+  background: yellow;
+  color: forestgreen;
+}
+
+.pseudo_classes ul li a.after:link {
+  background-color: yellowgreen;
+}
+
+.pseudo_classes ul li a.visited:visited {
+  color: yellow;
+}
+
+.pseudo_classes ul li a.hover:hover {
+  color: blueviolet;
+  font-size: 40px;
+}
+.pseudo_classes ul li a.active:active {
+  background-color: yellow;
+}
+.allinone:link {
+  color: orchid;
+}
+.allinone:hover {
+  color: orangered;
+}
+.allinone:active {
+  color: yellowgreen;
+  background-color: red;
+}
+.allinone:visited {
+  color: aqua;
+  background-color:green;
+}

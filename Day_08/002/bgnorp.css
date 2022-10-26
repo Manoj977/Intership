@@ -1,0 +1,17 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.bgimage{
+    background: url("https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg");
+    width: 60vw;
+    height: 80vh;
+    margin: 20px auto;
+    background-repeat: no-repeat;
+}
+.bgimage p{
+    color: antiquewhite;
+    width: 70%;
+    padding: 10px;
+}

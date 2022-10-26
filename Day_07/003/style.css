@@ -1,0 +1,29 @@
+.one {
+  border: 10px solid red;
+}
+.one_outline{
+    outline-width: 10px;
+    outline-style: groove;
+    outline-color: blue;
+}
+.two {
+  outline-width: 2px;
+  outline-style: groove;
+  outline-color: blue;
+  border: 2px solid gray;
+}
+.three {
+  outline-width: 6px;
+  outline-color: blue;
+  outline-style: groove;
+  outline-offset: 10px;
+  border: 2px solid gray;
+}
+
+.four {
+  outline-width: 3px;
+  outline-color: blue;
+  outline-style: groove;
+  outline-offset: -10px;
+  border: 2px solid gray;
+}

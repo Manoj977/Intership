@@ -1,0 +1,62 @@
+section {
+  display: flex;
+  width: 900px;
+  height: 500px;
+  padding-left: 150px;
+  margin: 20px auto;
+  border: 2px solid;
+}
+div {
+  position: absolute;
+  margin: 20px auto;
+  width: 200px;
+  height: 200px;
+  box-shadow: 2px 2px 9px gray;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+div:hover {
+  scale: 1.1;
+  transition: 0.3s ease-in-out;
+}
+.one {
+  z-index: 0;
+  background: limegreen;
+  opacity: 0.7;
+}
+.two {
+  top: 60px;
+  margin-left: 40px;
+  z-index: 0;
+  background: orange;
+  opacity: 0.7;
+}
+.three {
+  top: 100px;
+  margin-left: 80px;
+  z-index: 1;
+  background: gray;
+  opacity: 0.7;
+}
+.four {
+  top: 140px;
+  margin-left: 120px;
+  z-index: 1;
+  background: indigo;
+  opacity: 0.7;
+}
+.five {
+  top: 180px;
+  margin-left: 170px;
+  z-index: 1;
+  background: goldenrod;
+  opacity: 0.7;
+}
+.six {
+  top: 220px;
+  margin-left: 220px;
+  z-index: 1;
+  opacity: 0.7;
+  background: yellowgreen;
+}
