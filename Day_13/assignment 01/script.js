@@ -15,7 +15,7 @@ if (ebReadingValue >= 101 && ebReadingValue <= 250) {
     var reading = 5 * (ebReadingValue - 100);
     alert("You Need to Pay: " + reading);
   }
-  if (ebReadingValue >= 250) {
+  if (ebReadingValue <= 250) {
     var reading = 5 * (ebReadingValue - 150);
     alert("You Need to Pay: " + reading);
   }
