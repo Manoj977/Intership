@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  font-family: poppins, "sans-serief";
+}
+
+body {
+  background: lightsalmon;
+}
+.que {
+  height: 10vh;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+form{
+    margin: 30px auto;
+    justify-content: center;
+    height: 30vh;
+    display: grid;
+    width: 30vw;
+    align-items: center;
+    box-shadow: 2px 4px 5px salmon;
+}
+input[type="text"]{
+    width: 320px;
+    height: 34px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+input[type=button]{
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}

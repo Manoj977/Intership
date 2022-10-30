@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 8</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div>find the average marks of the students</div>
+    <div class="section">
+      <table>
+        <form name="gradecalculation" action="#" method="get">
+          <tr>
+            <th>
+              <label for="Student_id">Student ID:</label>
+            </th>
+            <td>
+              <input type="number" name="Id" id="Student_id" />
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="Student_Name">Student Name:</label>
+            </th>
+            <td>
+              <input type="text" name="Name" id="Student_Name" />
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="Mark_English">English</label>
+            </th>
+            <td>
+              <input type="number" name="English" id="Mark_English" />
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="Mark_Tamil">Tamil</label>
+            </th>
+            <td>
+              <input type="number" name="Tamil" id="Mark_Tamil" />
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="Mark_Maths">Mathematics</label>
+            </th>
+            <td>
+              <input type="number" name="Maths" id="Mark_Maths" />
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="Mark_Science">Science</label>
+            </th>
+            <td>
+              <input type="number" name="Science" id="Mark_Science" />
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="Mark_Social">Social Science</label>
+            </th>
+            <td>
+              <input type="number" name="Social" id="Mark_Social" />
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="Average">Average:</label>
+            </th>
+            <td>
+              <a id="Average"></a>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="Student_Grade">Grade:</label>
+            </th>
+            <td>
+              <a id="Grade"></a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"  style="text-align:center;">
+                <input  type="button" onclick="userDetails()" value="Submit" style="margin-right: 40px;" />
+  
+                <input type="reset" value="Reset" onclick="resete()" style="margin-left: 40px;"/>
+              </td>
+          </tr>
+        </form>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 05</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="question">
+      Write GST program calculation:(Inputs: Product price, Quantity, GST 18%,
+      Total amount)
+    </div>
+    <div class="form">
+      <table>
+        <form action="#" name="form" method="get">
+          <tr>
+            <th>
+              <label for="Price" name="Product_price">Product Price</label>
+            </th>
+            <td>
+              <input
+                type="number"
+                name="Product"
+                id="Price"
+                placeholder="Price of the Product"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="qty">Quantity</label>
+            </th>
+            <td>
+              <input
+                type="number"
+                name="Quantity"
+                id="qty"
+                placeholder="Enter your Quantity"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="gst">GST</label>
+            </th>
+            <td>
+              <a id="gst">18%</a>
+            </td>
+          </tr>
+          <tr >
+            <th>
+              <label for="Total">Total Amount</label>
+            </th>
+            <td>
+              <a id="Total"></a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="border: none;">
+              <input type="button" onclick="BillingForm()" value="Submit" />
+
+              <input type="reset" value="Reset" onclick="resete()" />
+            </td>
+          </tr>
+        </form>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

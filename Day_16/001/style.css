@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  font-family: poppins, "sans-serief";
+}
+body{
+    background: lightsteelblue;
+}
+.que{
+    border: 1px solid;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    justify-content: center;
+}
+#array{
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#given_array,#reversed_array{
+    margin-left: 10px;
+    margin-right: 20px;
+    border: 1px solid;
+    width: fit-content;
+    padding: 5px 10px;
+    letter-spacing: 3px;
+}

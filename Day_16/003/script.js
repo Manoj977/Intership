@@ -8,9 +8,9 @@ if (number > 0) {
     }
   }
   if (prime == 0) {
-    console.log(number+" Its Prime Number ");
+    alert(number+" Its Prime Number ");
   } else {
-    console.log(number+" Its not a prime number ");
+    alert(number+" Its not a prime number ");
   }
 } else {
   console.log("err");
