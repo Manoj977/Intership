@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="registration">
+      <div class="heading">
+        <h2>Registration Form</h2>
+      </div>
+      <div class="form">
+        <table>
+          <form id="form" method="post">
+            <tr>
+              <th>
+                <label for="Name">Full Name:</label>
+              </th>
+              <td>
+                <input
+                  type="text"
+                  name="Name"
+                  id="Name"
+                  placeholder="Enter your Full Name"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label for="Name">User Name:</label>
+              </th>
+              <td>
+                <input
+                  type="text"
+                  name="UserName"
+                  id="UserName"
+                  placeholder="Enter your User Name"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label for="email">Email:</label>
+              </th>
+              <td>
+                <input
+                  type="email"
+                  name="Email"
+                  id="email"
+                  placeholder="Enter your Mail id"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label for="pass">Password:</label>
+              </th>
+              <td>
+                <input
+                  type="password"
+                  name="Password"
+                  id="Password"
+                  placeholder="Enter your Password"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label for="cnfmpass">Confirm Password:</label>
+              </th>
+              <td>
+                <input
+                  type="password"
+                  name="Cnfmpass"
+                  id="cnfmpass"
+                  placeholder="re-enter your Password"
+                />
+              </td>
+            </tr>
+            <tr class="last_row">
+              <td colspan="2">
+                <input type="submit" value="Register" />
+                <input type="reset" value="Reset" onclick="clears()"/>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <div class="message" id="message"></div>
+              </td>
+            </tr>
+          </form>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+body {
+  background-color: lightcyan;
+}
+.heading {
+  background: lightgrey;
+  padding: 10px;
+  box-shadow: 1px 10px 4px rgb(241, 241, 241);
+  text-align: center;
+}
+.form {
+  margin: 30px auto;
+  border: 0px solid gray;
+  background: linear-gradient(
+    to right top,
+    rgba(255, 0, 0, 0.406),
+    rgba(0, 0, 255, 0.375)
+  );
+  border-radius: 10px;
+  margin-top: 30px;
+  height: 76vh;
+  width: 50vw;
+  box-shadow: 0px 0px 10px gray;
+}
+table {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+th {
+  text-align: right;
+  padding: 0px 20px;
+  width: 20vh;
+  flex-wrap: wrap;
+}
+td {
+  width: 50vh;
+}
+
+input[type="text"],
+[type="email"],
+[type="password"] {
+  width: 96%;
+  height: 50px;
+  padding: 0px 20px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  opacity: 0.6;
+  caret-color: rgba(0, 0, 255, 0.375);
+  transition: 0.4s ease-in-out;
+}
+input[type="text"]:focus,
+[type="email"]:focus,
+[type="password"]:focus{
+    opacity: 0.9;
+}
+
+.last_row {
+  height: 60px;
+  text-align: center;
+}
+input[type="submit"] {
+  color: rgb(22, 69, 22);
+  background-color: lightgreen;
+}
+input[type="reset"] {
+  color: rgb(110, 24, 24);
+  background-color: rgb(245, 152, 152);
+}
+input[type="submit"],
+[type="reset"] {
+    outline: none;
+  width: 150px;
+  height: 40px;
+  border: none;
+  font-size: 20px;
+  border-radius: 10px;
+  margin: 5px 30px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+input[type="submit"]:focus,
+[type="reset"]:focus{
+}
+input[type="submit"]:hover,
+[type="reset"]:hover {
+  font-size: 22px;
+  box-shadow: 4px 4px 5px rgb(54, 53, 53);
+  scale: 1;
+}
+
+
+.message {
+  border: 1px solid;
+  height: 80px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  
+}
