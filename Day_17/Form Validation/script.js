@@ -10,28 +10,34 @@ form.addEventListener("submit", function (e) {
   var catcher = [];
 
   if (fullName.value == "") {
-    catcher.push("Enter your Full name");
+    catcher.push("Enter your Full name" + "<br/>");
   }
   if (userName.value == "") {
-    catcher.push("Enter your User name");
+    catcher.push("Enter your User name" + "<br/>");
   }
   if (emailId.value == "") {
-    catcher.push("Enter your EmailId");
+    catcher.push("Enter your EmailId" + "<br/>");
   }
   if (passWord.value == "") {
-    catcher.push("Enter your Password");
+    catcher.push("Enter your Password" + "<br/>");
   }
   if (cnfmPass.value == "") {
-    catcher.push("Enter you Confirm Password");
+    catcher.push("Enter you Confirm Password" + "<br/>");
+  }
+  if (passWord.value != cnfmPass.value) {
+    catcher.push(
+      "Password and conform password are not same please check" + "<br/>"
+    );
   }
   if (
     fullName.value != "" &&
     userName.value != "" &&
     emailId.value != "" &&
     passWord.value != "" &&
-    cnfmPass.value != ""
+    cnfmPass.value != "" &&
+    passWord.value == cnfmPass.value
   ) {
-    alert("Registered SuccessFully");
+    alert("Registered successfully");
     clearfield();
   }
 

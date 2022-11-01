@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch API Data</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <table>
+      <form action="#" method="get">
+        <tr>
+          <td colspan="2" style="text-align: center">
+            Total Registered Users:
+            <span id="count">0</span>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <label for="name">Name:</label>
+          </th>
+          <td>
+            <input
+              type="text"
+              name="Text"
+              id="text"
+              placeholder="Your Name"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <label for="mail">Email:</label>
+          </th>
+          <td>
+            <input
+              type="email"
+              name="Email"
+              id="email"
+              placeholder="Your Email"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <label for="feedback">Feedback:</label>
+          </th>
+          <td>
+            <textarea
+              name="feedback"
+              id="feedback"
+              cols="30"
+              rows="3"
+              placeholder="write something...."
+              required
+            ></textarea>
+          </td>
+        </tr>
+        <tr class="last_row">
+          <td colspan="2">
+            <input type="submit" value="Register" onclick="apifetch(event)" />
+            <input type="reset" value="Reset" />
+          </td>
+        </tr>
+      </form>
+    </table>
+    <script src="script.js"></script>
+  </body>
+</html>
