@@ -5,6 +5,7 @@ var passWord = document.getElementById("Password");
 var cnfmPass = document.getElementById("cnfmpass");
 var form = document.getElementById("form");
 
+
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   var catcher = [];

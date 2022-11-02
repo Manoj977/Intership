@@ -1,0 +1,116 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  caret-color: lightsalmon;
+}
+body {
+  background: lightsalmon;
+  border: 1px solid;
+  height: 100vh;
+}
+.header {
+  /* border: 1px solid; */
+  margin: 30px;
+  text-align: center;
+  font-size: 30px;
+  background: -webkit-linear-gradient(rgb(19, 18, 18), rgb(102, 101, 101));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.container {
+  width: 40vw;
+  height: 50vh;
+  /* border: 1px solid; */
+  margin: 30px auto;
+  box-shadow: 0px 0px 5px lightcoral;
+  transition: 0.3s ease-in-out;
+}
+
+.storageData {
+  position: relative;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  padding: 10px;
+  height: 10vh;
+  /* border: 1px solid; */
+  border-radius: 7px;
+  margin: 30px;
+  background-color: aqua;
+  box-shadow: 3px 4px 5px black;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  outline: none;
+  border: none;
+  opacity: 0.7;
+}
+form textarea {
+  margin-top: 5px;
+  width: 100%;
+  height: 290px;
+  font-size: 20px;
+  resize: none;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  outline: none;
+  border: none;
+  opacity: 0.7;
+}
+#addBtn {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  background-color: blanchedalmond;
+  border-radius: 4px;
+}
+.task {
+  background-color: azure;
+  border: 1px solid;
+}
+
+li {
+  list-style: none;
+}
+#Shown {
+  display: flex;
+  width: 70%;
+}
+
+.section {
+  margin: 20px auto;
+  align-items: center;
+  /* border: 1px solid; */
+  width: 90%;
+  height: 20%;
+}
+.close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: antiquewhite;
+}
+.close:hover{
+  color: red;
+}

@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Orbitron", sans-serif;
+  color: #39ff14;
+}
+
+body {
+  background-color: black;
+  overflow: hidden;
+}
+.clock {
+  /* border: 1px solid; */
+  height: 370px;
+  align-items: center;
+  justify-content: center;
+  margin: 8rem auto;
+  font-size: 80px;
+  display: flex;
+  text-shadow: 2px 3px 5px#39FF14;
+}
+.hour,
+.minute,
+.second,
+.millisecond {
+  text-align: center;
+  width: 250px;
+  height: 250px;
+  background-color: rgb(22, 22, 22);
+  /* border: 1px solid; */
+  margin: 0px 10px;
+  border-radius: 15px;
+  caret-color: rgb(22, 22, 22);
+}
+#hours,
+#minutes,
+#seconds,
+#milliseconds {
+  display: block;
+  margin-top: 20px;
+  font-size: 120px;
+  padding: 20px;
+}
+.colon {
+  font-size: 90px;
+  text-rendering: 20px;
+}
+.meridiem {
+  font-size: 30px;
+  text-shadow: none !important;
+  margin: 0px 10px;
+}
+.millisecond{
+  width: 400px;
+}
