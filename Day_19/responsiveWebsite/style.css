@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+header {
+  min-width: 320px;
+  height: 50px;
+  font-size: larger;
+  line-height: 50px;
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #00b081;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.brand {
+  width: auto;
+  font-size: 26px;
+  height: 100%;
+  float: left;
+  margin: 0;
+  margin-left: 10px;
+}
+.menu {
+  width: 60%;
+  height: 100%;
+  float: right;
+}
+.menu ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.menu ul a {
+  width: 20%;
+  color: white;
+  display: inline-block;
+}
+.menu ul a:hover {
+  background-color: white;
+  color: #00b081;
+}
+#menu {
+  display: none;
+}
+.menu-icon {
+  display: none;
+}
+
+.trending,
+.mobile,
+.electronics {
+  border-bottom: 1px solid;
+  margin: 10px;
+  margin: 30px 10px;
+}
+.trending .trendingSection,
+.mobile .mobileSection,
+.electronics .electronicsSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+.trending .trendingSection .trendingSectionOne,
+.trending .trendingSection .trendingSectionTwo,
+.trending .trendingSection .trendingSectionThree,
+.trending .trendingSection .trendingSectionFour,
+.trending .trendingSection .trendingSectionFive,
+.mobile .mobileSection .mobileSectionOne,
+.mobile .mobileSection .mobileSectionTwo,
+.mobile .mobileSection .mobileSectionThree,
+.mobile .mobileSection .mobileSectionFour,
+.mobile .mobileSection .mobileSectionFive,
+.electronics .electronicsSection .electronicsSectionOne,
+.electronics .electronicsSection .electronicsSectionTwo,
+.electronics .electronicsSection .electronicsSectionThree,
+.electronics .electronicsSection .electronicsSectionFour,
+.electronics .electronicsSection .electronicsSectionFive {
+  /* border: 0.5px solid; */
+  width: 250px;
+  height: 240px;
+  margin-inline: 5px;
+}
+.trending .trendingSection .trendingSectionOne .image,
+.trending .trendingSection .trendingSectionTwo .image,
+.trending .trendingSection .trendingSectionThree .image,
+.trending .trendingSection .trendingSectionFour .image,
+.trending .trendingSection .trendingSectionFive .image,
+.mobile .mobileSection .mobileSectionOne .image,
+.mobile .mobileSection .mobileSectionTwo .image,
+.mobile .mobileSection .mobileSectionThree .image,
+.mobile .mobileSection .mobileSectionFour .image,
+.mobile .mobileSection .mobileSectionFive .image,
+.electronics .electronicsSection .electronicsSectionOne .image,
+.electronics .electronicsSection .electronicsSectionTwo .image,
+.electronics .electronicsSection .electronicsSectionThree .image,
+.electronics .electronicsSection .electronicsSectionFour .image,
+.electronics .electronicsSection .electronicsSectionFive .image {
+  /* border: 0.5px solid red; */
+  width: 100%;
+  height: 65%;
+}
+.trending .trendingSection .trendingSectionOne .image img,
+.trending .trendingSection .trendingSectionTwo .image img,
+.trending .trendingSection .trendingSectionThree .image img,
+.trending .trendingSection .trendingSectionFour .image img,
+.trending .trendingSection .trendingSectionFive .image img,
+.mobile .mobileSection .mobileSectionOne .image img,
+.mobile .mobileSection .mobileSectionTwo .image img,
+.mobile .mobileSection .mobileSectionThree .image img,
+.mobile .mobileSection .mobileSectionFour .image img,
+.mobile .mobileSection .mobileSectionFive .image img,
+.electronics .electronicsSection .electronicsSectionOne .image img,
+.electronics .electronicsSection .electronicsSectionTwo .image img,
+.electronics .electronicsSection .electronicsSectionThree .image img,
+.electronics .electronicsSection .electronicsSectionFour .image img,
+.electronics .electronicsSection .electronicsSectionFive .image img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  /* border: 0.5px solid; */
+  transition: 0.3s ease-in-out;
+  height: 100%;
+  padding: 4px;
+  cursor: pointer;
+}
+.image img:hover {
+  transform: scale(1.2);
+}
+.trending .trendingSection .trendingSectionOne .desc,
+.trending .trendingSection .trendingSectionTwo .desc,
+.trending .trendingSection .trendingSectionThree .desc,
+.trending .trendingSection .trendingSectionFour .desc,
+.trending .trendingSection .trendingSectionFive .desc,
+.mobile .mobileSection .mobileSectionOne .desc,
+.mobile .mobileSection .mobileSectionTwo .desc,
+.mobile .mobileSection .mobileSectionThree .desc,
+.mobile .mobileSection .mobileSectionFour .desc,
+.mobile .mobileSection .mobileSectionFive .desc,
+.electronics .electronicsSection .electronicsSectionOne .desc,
+.electronics .electronicsSection .electronicsSectionTwo .desc,
+.electronics .electronicsSection .electronicsSectionThree .desc,
+.electronics .electronicsSection .electronicsSectionFour .desc,
+.electronics .electronicsSection .electronicsSectionFive .desc {
+  width: 100%;
+  border: 0.5px solid blue;
+  height: 35%;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  word-spacing: 3px;
+  background-color: rgb(217, 215, 215);
+  border-radius: 5px;
+  box-shadow: 3px 4px 4px gray;
+  font-size: 15px;
+}
+p.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+.price button {
+  margin-left: 20px;
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  background-color: #00b081;
+  color: white;
+}
+.price button:hover {
+  transform: scale(1.1);
+}
+.about {
+  /* border: 0.5px solid; */
+  margin: 10px;
+}
+.about .aboutFlex {
+  display: flex;
+}
+.about .aboutFlex .aboutFlexAbout {
+  /* border: 1px solid; */
+  width: 50%;
+  padding: 30px;
+  padding-inline: 30px;
+  border-right: 1px solid;
+}
+.about .aboutFlex .aboutForm {
+  margin-top: -27px;
+  margin-left: 20px;
+  width: 50%;
+}
+.about .aboutFlex .aboutForm form {
+  /* border: 1px solid; */
+  text-align: center;
+}
+.about .aboutFlex .aboutForm form input,
+textarea {
+  margin: 10px;
+}
+input[type="text"],
+input[type="email"],
+input[type="button"] {
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+input[type="text"],
+input[type="email"],
+input[type="button"],
+textarea {
+  outline: none;
+  width: 90%;
+  resize: none;
+}
+.h {
+  display: inline;
+}
+.footer {
+  height: 120px;
+  background-color: #00b081;
+  display: flex;
+  align-items: center;
+}
+.footer .footerSectionOne {
+  width: 50%;
+  height: 90%;
+  padding: 20px;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(70, 67, 67);
+  /* border: 1px solid; */
+}
+.footer .footerSectionTwo {
+  width: 50%;
+  height: 90%;
+  padding: 20px;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(70, 67, 67);
+  /* border: 1px solid; */
+}
+.subscribe {
+  padding: 10px;
+  background: rgb(30, 127, 165);
+  border: 2px solid rgb(30, 127, 165);
+  border-radius: 3px;
+  outline: none;
+}
+/* Media Screen */
+@media screen and (max-width: 932px) {
+  .menu {
+    width: 100%;
+    height: auto;
+  }
+  .menu ul {
+    display: block;
+    max-height: 0; /**/
+    overflow: hidden;
+  }
+  .menu ul a {
+    text-align: left;
+    width: 100%;
+    height: 50px;
+    background-color: #00b081;
+    padding-left: 10px;
+  }
+  .menu-icon {
+    width: 100px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 60px;
+  }
+  #menu:checked ~ ul {
+    max-height: 350px; /**/
+  }
+  .menu-icon i {
+    font-size: 1.7em;
+  }
+  .trending,
+  .mobile,
+  .electronics {
+    border-bottom: 0px;
+    border-top: 1px solid;
+  }
+  section {
+    flex-direction: column;
+  }
+  section div {
+    margin: 10px;
+  }
+  p {
+    font-size: 15px;
+  }
+  p.price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+  }
+  .about .aboutFlex {
+    display: block;
+    width: 100%;
+  }
+  .about .aboutFlex .aboutFlexAbout {
+    width: 100%;
+    border: none;
+  }
+  .about .aboutFlex .aboutForm {
+    width: 100%;
+    margin: 0;
+  }
+
+  .footer {
+    height: auto;
+    display: block;
+  }
+  .footer .footerSectionOne,
+  .footer .footerSectionTwo {
+    width: 100%;
+    text-align: center;
+  }
+  .footer .footerSectionOne p {
+    margin-top: 20px;
+  }
+}

@@ -31,7 +31,7 @@ function millisec() {
   var milliseconds = new Date().getMilliseconds();
   mss.innerHTML = milliseconds;
   setTimeout(() => {
-    millisec(), 100;
+    millisec(), 1;
   });
   console.log(mss);
 }

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/regular.min.js"
+      integrity="sha512-Kcbb5bDGCQQwo67YHS9uDvRmyrNEqHLPA1Kmn0eqrritqGDp3OpkBGvHk36GNEH44MtWM1L5k3i9MSQPMkNIuA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      async
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navbar-brand">
+        <a href="#">Emerland</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <div class="div_1">
+        <div class="heading">
+          <span id="Products"> Products </span>
+        </div>
+        <div class="productsList">
+          <div class="one">
+            <div class="imageSection">
+              <img class="imgSrc" src="mobile.png" alt="mobile.png" />
+            </div>
+            <div class="productSection">
+              <h3 class="title" id="title">Nokia 6.1 plus</h3>
+              <p class="varient" id="varient">(5.8 inch) Full HD+ Display</p>
+              <p>4 GB RAM | 64 GB ROM</p>
+              <p class="price" id="price" style="font-weight: 700">
+                &#8377;13000
+              </p>
+              <button class="cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="productsList">
+          <div class="one">
+            <div class="imageSection">
+              <img class="imgSrc" src="boon.png" alt="boon.png" />
+            </div>
+            <div class="productSection">
+              <h3 class="title" id="title">
+                JBL Boombox Bluetooth Party Speaker
+              </h3>
+              <p>Power Source: 20V/4A</p>
+              <p class="varient" id="varient">(Black, Stereo Channel)</p>
+              <p class="price" id="price" style="font-weight: 700">
+                &#8377;26999
+              </p>
+              <button class="cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="productsList">
+          <div class="one">
+            <div class="imageSection">
+              <img class="imgSrc" src="jbl.png" alt="jblpng" srcset="" />
+            </div>
+            <div class="productSection">
+              <h3 class="title" id="title">Black JBL Pulse 2</h3>
+              <p>
+                Power Output(RMS): 16 W, Battery life: 10 hr | Charging time: 5
+                hr
+              </p>
+              <p class="varient" id="varient">Dark Gray</p>
+              <p class="price" id="price" style="font-weight: 700">
+                &#8377;17990
+              </p>
+              <button class="cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="div_2">
+        <div class="heading">
+          <span id="Cart">Cart</span>
+          <!-- <div id="products">
+            <i class="fa-solid fa-cart-shopping"> </i>
+            Cart is empty
+          </div> -->
+          <div class="cartTitle">
+            <div class="section">
+              <div class="sec1">
+                <p>ITEM</p>
+              </div>
+              <div class="sec2">
+                <p>PRICE</p>
+              </div>
+              <div class="sec3">
+                <p>QUANTITY</p>
+              </div>
+            </div>
+            <div class="cartContent">
+              <!-- <div class="cartRow">
+                          <div class="one_1">
+                                <div class="cartImage">
+                                  <img class="cartImageSrc" src="mobile.png" alt="image" />
+                                </div>
+                                <div class="cartDesc">
+                                   <p class="cartTitle">Nokia 6.1 plus</p>
+                                </div>
+                          </div>
+                          <div class="two_1">
+                            <p class="cartPrice">&#8377;13000</p>
+                          </div>
+                          <div class="three_1">
+                                  <input
+                                    class="cartQuantityInput"
+                                    type="number"
+                                    id="quantiy"
+                                    value="1"
+                                  />
+                                  <button class="button" type="button">Remove</button>
+                          </div>
+                </div> -->
+              <!---->
+              <!-- <div class="cartRow">
+                  <div class="one_1">
+                    <div class="cartImage">
+                      <img class="cartImageSrc" src="boon.png" alt="image" />
+                    </div>
+                    <div class="cartDesc">
+                      <p class="cartTitle">
+                        JBL Boombox Bluetooth Party Speaker
+                      </p>
+                    </div>
+                  </div>
+                  <div class="two_1">
+                    <p class="cartPrice">&#8377;26999</p>
+                  </div>
+                  <div class="three_1">
+                    <input
+                      class="cartQuantityInput"
+                      type="number"
+                      id="quantiy"
+                      value="2"
+                    />
+                    <button class="button" type="button">Remove</button>
+                  </div>
+                </div> -->
+            </div>
+            <div class="total">
+              <strong class="totalHeading">Total</strong>
+              <a class="totalPrice">&#8377;0</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
