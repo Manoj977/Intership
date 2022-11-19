@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>  
+    <div class="calculator">
+      <h2>Calculator</h2>
+      <div class="table">
+        <table>
+          <form name="calc">
+            <tr>
+              <td colspan="4">
+                <input id="textBox" name="textbox" type="text" placeholder="0" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input id="clr" type="button" value="AC" onclick="clearscreen()" />
+              </td>
+              <td>
+                <input id="div" type="button" value="/" onclick="divnum()" />
+              </td>
+              <td>
+                <input id="mul" type="button" value="*" onclick="mulnum()" />
+              </td>
+              <td>
+                <input id="sub" type="button" value="-" onclick="subnum()" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  class="button"
+                  type="button"
+                  value="7"
+                  onclick="seven()"
+                />
+              </td>
+              <td>
+                <input
+                  class="button"
+                  type="button"
+                  value="8"
+                  onclick="eight()"
+                />
+              </td>
+              <td>
+                <input
+                  class="button"
+                  type="button"
+                  value="9"
+                  onclick="nine()"
+                />
+              </td>
+              <td rowspan="2">
+                <input
+                  id="add"
+                  type="button"
+                  value="+"
+                  style="height: 70px"
+                  onclick="addnum()"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  class="button"
+                  type="button"
+                  value="4"
+                  onclick="four()"
+                />
+              </td>
+              <td>
+                <input
+                  class="button"
+                  type="button"
+                  value="5"
+                  onclick="five()"
+                />
+              </td>
+              <td>
+                <input class="button" type="button" value="6" onclick="six()" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input class="button" type="button" value="1" onclick="one()" />
+              </td>
+              <td>
+                <input class="button" type="button" value="2" onclick="two()" />
+              </td>
+              <td>
+                <input
+                  class="button"
+                  type="button"
+                  value="3"
+                  onclick="three()"
+                />
+              </td>
+              <td rowspan="2">
+                <input
+                  id="equal"
+                  type="button"
+                  value="="
+                  onclick="myfunc()"
+                  style="height: 70px"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <input
+                  class="button"
+                  type="button"
+                  value="0"
+                  onclick="zero()"
+                />
+              </td>
+              <td>
+                <input
+                  class="button"
+                  type="button"
+                  value="."
+                  onclick="deci()"
+                />
+              </td>
+            </tr>
+          </form>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
