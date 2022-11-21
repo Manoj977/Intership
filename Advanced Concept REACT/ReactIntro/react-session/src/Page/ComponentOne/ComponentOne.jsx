@@ -6,7 +6,6 @@ import ComponentFour from "../ComponentFour/ComponentFour";
 import ComponentTwo from "../ComponentTwo/ComponentTwo";
 import "./ComponentOne.css";
 import ComponentZero from "../ComponentZero/ComponentZero";
-import ComponentThree from "../ComponentThree/ComponentThree";
 const ComponentOne = () => {
   return (
     <>

@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import "../../../src/Style.css";
 
-// import ComponentThree from "../ComponentThree/ComponentThree";
 const ComponentTwo = (props) => {
   let b = JSON.parse(localStorage.getItem("Datas"));
 
@@ -44,9 +43,10 @@ const ComponentTwo = (props) => {
       <div className="Component-Cart">
         <p className="Heading">Cart Items</p>
         <div>
-          {b != null || cartItems.length === 0 && (
-            <div className="cart">Cart is Empty</div>
-          )}
+          {b != null ||
+            (cartItems.length === 0 && (
+              <div className="cart">Cart is Empty</div>
+            ))}
         </div>
         {b != null &&
           b.map((item, index) => (
