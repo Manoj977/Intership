@@ -1,50 +1,56 @@
-import { NavLink, Route, Routes } from "react-router-dom";
-import "./style.css";
-import Home from "./page/home/Home";
-import About from "./page/about/About";
-import Products from "./page/products/Products";
-import User from "./page/user/User";
-import Profile from "./page/profile/Profile";
-import Payment from "./page/Payment/Payment";
-import Order from "./page/order/Order";
-import BillAmount from "./page/BillAmount/BillAmount";
-
-function App() {
+import React, { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import Data from "./Data/ContentData";
+import ComponentFive from "./Page/ComponentFive/ComponentFive";
+import ComponentFour from "./Page/ComponentFour/ComponentFour";
+import ComponentOne from "./Page/ComponentOne/ComponentOne";
+import ComponentThree from "./Page/ComponentThree/ComponentThree";
+import ComponentTwo from "./Page/ComponentTwo/ComponentTwo";
+import ComponentZero from "./Page/ComponentZero/ComponentZero";
+import "./Style.css";
+const App = () => {
+  const { products } = Data;
+  const [cartItems, SetCartItems] = useState([]);
+  const onAdd = (product) => {
+    const exist = cartItems.find((x) => x.ProductID === product.ProductID);
+    if (exist) {
+      SetCartItems(
+        cartItems.map((x) =>
+          x.ProductID === product.ProductID ? { ...exist } : x
+        )
+      );
+      // alert("Already in cart");
+    } else {
+      let cart= [...cartItems, { ...product }]
+      SetCartItems(cart);
+      localStorage.setItem("Datas", JSON.stringify(cart));
+      // alert("clicked");
+    }
+  };
   return (
-    <>
-      <div className="container">
-        <div className="navigation">
-          <h3>Navigation</h3>
-          <ul>
-            <li>
-              <NavLink to="/home">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/products">Products</NavLink>
-            </li>
-            <li>
-              <NavLink to="/about">About</NavLink>
-            </li>
-            <li>
-              <NavLink to="/Users">User</NavLink>
-            </li>
-          </ul>
-        </div>
+    <div className="container">
+      <ComponentOne />
+      <div className="DisplayComponent container">
         <Routes>
-          <Route path="home" element={<Home />} />
-          <Route path="products" element={<Products />} />
-          <Route path="about" element={<About />} />
-          <Route path="Users" element={<User />}>
-            <Route path="profile" element={<Profile />} />
-            <Route path="payment" element={<Payment />} />
-            <Route path="order" element={<Order />}>
-              <Route path=":OrderID" element={<BillAmount />} />
-            </Route>
-          </Route>
+          <Route path="/" element={<ComponentZero />} />
+          <Route path="/Home" element={<ComponentZero />} />
+          <Route
+            path="/Products"
+            element={
+              <ComponentTwo
+                onAdd={onAdd}
+                Products={products}
+                cartItems={cartItems}
+              />
+            }
+          />
+
+          <Route path="/Account" element={<ComponentFour />} />
+          <Route path="/About" element={<ComponentFive />} />
         </Routes>
       </div>
-    </>
+    </div>
   );
-}
+};
 
 export default App;
