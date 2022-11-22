@@ -4,7 +4,7 @@ import { NavLink, Outlet } from "react-router-dom";
 const Product = () => {
   return (
     <div className="container">
-      Product
+     
       <ul className="content-product">
         <li>
           <NavLink to="Add">Add Section</NavLink>
