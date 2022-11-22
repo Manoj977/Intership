@@ -1,17 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 
 const Add = () => {
   const [productID, setProductID] = useState("");
   const [productName, setProductName] = useState("");
   const [productImage, setProductImage] = useState("");
   const [productPrice, setProductPrice] = useState("");
-  const handle = (e) => {
-    localStorage.setItem("ID", productID);
-    localStorage.setItem("Name", productName);
-    localStorage.setItem("Image", productImage);
-    localStorage.setItem("Price", productPrice);
+  function handle() {
+    let allProducts = [];
+    if (localStorage.getItem("products") !== null) {
+      allProducts = JSON.parse(localStorage.getItem("products"));
+    }
+
+    console.log(allProducts);
+    const obj = {
+      ID: productID,
+      Name: productName,
+      Image: productImage,
+      Price: productPrice,
+    };
+    allProducts.push(obj);
+
+    localStorage.setItem("products", JSON.stringify(allProducts));
+
     alert("Product Added");
-  };
+  }
 
   return (
     <div className="add">
@@ -48,11 +60,10 @@ const Add = () => {
               <td>
                 <label htmlFor="product-Image">ProductImage</label>
                 <input
-                  type="file"
-                  accept="image/png, image/jpeg, image/jpg"
+                  type="url"
                   id="product-Image"
                   alt="product-img"
-                  onChange={(e) => setProductImage(e.target.files)}
+                  onChange={(e) => setProductImage(e.target.value)}
                   required
                 />
               </td>
