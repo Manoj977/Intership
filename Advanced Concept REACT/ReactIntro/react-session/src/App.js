@@ -1,55 +1,48 @@
-import React, { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
-import Data from "./Data/ContentData";
-import ComponentFive from "./Page/ComponentFive/ComponentFive";
-import ComponentFour from "./Page/ComponentFour/ComponentFour";
-import ComponentOne from "./Page/ComponentOne/ComponentOne";
-import ComponentThree from "./Page/ComponentThree/ComponentThree";
-import ComponentTwo from "./Page/ComponentTwo/ComponentTwo";
-import ComponentZero from "./Page/ComponentZero/ComponentZero";
+import React from "react";
 import "./Style.css";
-const App = () => {
-  const { products } = Data;
-  const [cartItems, SetCartItems] = useState([]);
-  const onAdd = (product) => {
-    const exist = cartItems.find((x) => x.ProductID === product.ProductID);
-    if (exist) {
-      SetCartItems(
-        cartItems.map((x) =>
-          x.ProductID === product.ProductID ? { ...exist } : x
-        )
-      );
-      // alert("Already in cart");
-    } else {
-      let cart= [...cartItems, { ...product }]
-      SetCartItems(cart);
-      localStorage.setItem("Datas", JSON.stringify(cart));
-      // alert("clicked");
-    }
-  };
-  return (
-    <div className="container">
-      <ComponentOne />
-      <div className="DisplayComponent container">
-        <Routes>
-          <Route path="/" element={<ComponentZero />} />
-          <Route path="/Home" element={<ComponentZero />} />
-          <Route
-            path="/Products"
-            element={
-              <ComponentTwo
-                onAdd={onAdd}
-                Products={products}
-                cartItems={cartItems}
-              />
-            }
-          />
+import { NavLink, Route, Routes } from "react-router-dom";
+import Home from "./Page/Home";
+import Product from "./Page/Product";
+import ContactUs from "./ContactUs";
+import About from "./About";
+import Main from "./Main";
+import Add from "./Page/Add";
+import View from "./View";
 
-          <Route path="/Account" element={<ComponentFour />} />
-          <Route path="/About" element={<ComponentFive />} />
-        </Routes>
+const App = () => {
+  return (
+    <>
+      <div className="container">
+        <div className="heading">
+          <div>Demo</div>
+          <ul className="navigation">
+            <li>
+              <NavLink to="Home">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="Product">Product</NavLink>
+            </li>
+            <li>
+              <NavLink to="Contactus">ContactUs</NavLink>
+            </li>
+            <li>
+              <NavLink to="About">About</NavLink>
+            </li>
+          </ul>
+        </div>
+        {/* <div className="content">Component</div> */}
       </div>
-    </div>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="Home" element={<Home />} />
+        <Route path="product" element={<Product />}>
+          <Route path="Add" element={<Add />} />
+          <Route path="View" element={<View />} />
+        </Route>
+        <Route path="ContactUs" element={<ContactUs />} />
+        <Route path="About" element={<About />} />
+      </Routes>
+    </>
   );
 };
 

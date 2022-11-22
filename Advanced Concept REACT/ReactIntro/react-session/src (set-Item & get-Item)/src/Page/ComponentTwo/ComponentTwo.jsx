@@ -3,8 +3,10 @@ import { NavLink, Outlet } from "react-router-dom";
 import "../../../src/Style.css";
 
 const ComponentTwo = (props) => {
-  let b = JSON.parse(localStorage.getItem("Datas"));
-
+  let b = JSON.stringify(localStorage.getItem("Datas"));
+  const remove = () => {
+   console.log("removed");
+  };
   const { Products, onAdd } = props;
   const { cartItems } = props;
   return (
@@ -55,10 +57,19 @@ const ComponentTwo = (props) => {
                 <tbody>
                   <tr>
                     <td>
-                      <img className="products-image" src={item.ProductImage} />
+                      <img
+                        className="products-image"
+                        src={item.ProductImage}
+                        alt="cart-product-img"
+                      />
                     </td>
-                    <td>{item.ProductName}</td>
-                    <td className="price">₹ {item.ProductPrice}</td>
+                    <td>
+                      {item.ProductName}
+                      <br /> ₹ {item.ProductPrice}
+                    </td>
+                    <td>
+                      <button onClick={remove()}>Remove</button>
+                    </td>
                   </tr>
                 </tbody>
               </table>
