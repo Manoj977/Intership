@@ -1,12 +1,8 @@
 import React from "react";
-import Home from "./Page (Tailwind-CSS)/Home";
-
+import Main from "./API-Integration/Components/Main";
+// import Main from "./Cooking-Recipe/Components/App/Main"; ====>>>>>>     Cooking Receipe
 const App = () => {
-  return (
-    <>
-      next
-    </>
-  );
+  return <>{/*   <Main /> ====>>>>>>     Cooking Receipe */ <Main />}</>;
 };
 
 export default App;
