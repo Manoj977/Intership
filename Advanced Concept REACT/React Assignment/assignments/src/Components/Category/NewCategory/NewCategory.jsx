@@ -25,7 +25,7 @@ const NewCategory = () => {
       }
     }
   };
-  const update = async () => {
+  const update=async()=>{
     const updC = {
       category_name: Name,
       category_desc: Desc,
@@ -39,7 +39,7 @@ const NewCategory = () => {
     } catch (e) {
       console.log(e);
     }
-  };
+  }
 
   return (
     <div className="addCategories">

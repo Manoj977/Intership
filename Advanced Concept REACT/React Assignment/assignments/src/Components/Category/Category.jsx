@@ -30,12 +30,12 @@ export const Category = () => {
     await deleteCategory(category_id);
     await getAllCategories();
   };
-  const editC = (value) => {
-    <UpdateCategory value={value} />;
-    // await updateCategory(category_id);
-    // await getAllCategories();
+  const setData = async (data) => {
+    let { category_id, category_name, category_desc } = data;
+    localStorage.setItem("category_id", category_id);
+    localStorage.setItem("category_name", category_name);
+    localStorage.setItem("category_desc", category_desc);
   };
-
   return (
     <div className="categoryShown">
       <h3>List of Category</h3>
@@ -58,14 +58,18 @@ export const Category = () => {
                 <td>{value.category_name}</td>
                 <td>{value.category_desc}</td>
                 <td>
+                <NavLink to="/update">
+
                   <button
                     onClick={() => {
-                      editC(value);
+                      setData(value);
                     }}
                     className="success"
                   >
                     Edit
                   </button>
+                </NavLink>
+              
                 </td>
                 <td>
                   <button

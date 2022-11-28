@@ -51,9 +51,19 @@ const addProduct = async (newData) => {
       throw e;
     });
 };
+const updateCategoryValue =async(category_id)=>{
+  return axiosParseData
+  .get("/categories/" + category_id)
+  .then((response) => {
+    return response.data;
+  })
+  .catch((e) => {
+    throw e;
+  });
+}
 const updateCategory = async (updateCategoryData) => {
   return axiosParseData
-    .put("/categories/" + updateCategoryData.product_id, updateCategoryData)
+    .put("/categories/" + updateCategoryData.id, updateCategoryData)
     .then((response) => {
       return response.data;
     })

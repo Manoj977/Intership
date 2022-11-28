@@ -7,6 +7,7 @@ import Home from "../Home/Home";
 import NewCategory from "../Category/NewCategory/NewCategory";
 import AddProduct from "../Products/Addproduct/AddProduct";
 import Products from "../Products/Products";
+import UpdateCategory from "../Category/UpdatedCategory/UpdateCategory";
 
 const Main = () => {
   return (
@@ -18,6 +19,7 @@ const Main = () => {
         <Route path="categories" element={<Category />}>
           <Route path="newCategory" element={<NewCategory />} />
         </Route>
+          <Route path="update" element={<UpdateCategory/>}/>
         <Route path="Products" element={<Products />} >
           <Route path="AddProduct" element={<AddProduct/>}/>
         </Route>
