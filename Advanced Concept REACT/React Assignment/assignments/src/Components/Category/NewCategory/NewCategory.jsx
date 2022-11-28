@@ -1,11 +1,19 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { addCategory } from "../../../API/apiService";
+import React, { useState, useEffect } from "react";
 
-const NewCategory = () => {
+import { addCategory, updateCategory } from "../../../API/apiService";
+
+const NewCategory = (props) => {
+  const { selectedCategory, actionType, getAllCategories } = props;
   const [Name, setName] = useState("");
   const [Desc, setDesc] = useState("");
-  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (actionType === "update") {
+      setName(selectedCategory.category_name);
+      setDesc(selectedCategory.category_desc);
+    }
+  }, [actionType, selectedCategory]);
+
   const add = async () => {
     if (Name === "" || Desc === "") {
       alert("Field is Empty");
@@ -15,35 +23,46 @@ const NewCategory = () => {
         category_desc: Desc,
       };
       try {
-        await addCategory(addC);
+        if (actionType === "new") {
+          await addCategory(addC);
+        } else {
+          const updateObject = {
+            ...addC,
+            category_id: selectedCategory.category_id,
+          };
+          await updateCategory(updateObject);
+        }
         alert("Added");
+        getAllCategories();
         setName("");
         setDesc("");
-        navigate(window.location.reload());
       } catch (e) {
         console.log(e);
       }
     }
   };
-  const update=async()=>{
+  const update = async () => {
     const updC = {
       category_name: Name,
       category_desc: Desc,
     };
     try {
       await addCategory(updC);
-      alert("Added");
+      alert("updated");
+      getAllCategories();
       setName("");
       setDesc("");
-      navigate(window.location.reload());
     } catch (e) {
       console.log(e);
     }
-  }
+  };
 
   return (
     <div className="addCategories">
-      <h1>Add New Category</h1>
+      <h1>
+        {actionType === "new" ? "Add New Data" : "Update the Existing Data"}
+      </h1>
+
       <div className="addProducts_content">
         <input
           type="text"

@@ -4,6 +4,8 @@
         "addnewproduct",
         "Addproduct",
         "datas",
+        "setaction",
+        "setselected",
         "updt"
     ]
 }

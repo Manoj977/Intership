@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, Outlet } from "react-router-dom";
 import { deleteProduct, fetchProducts } from "../../API/apiService";
+import UpdateProduct from "./UpdateProduct/UpdateProduct";
 const Products = () => {
   const [productsData, setProductsData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [actionType, setactionType] = useState(null);
+  const [selectedProduct, setselectedProduct] = useState({});
+
   useEffect(() => {
     getAllProducts();
   }, []);
@@ -19,25 +22,12 @@ const Products = () => {
     }
   };
   const deleteC = async (product_id) => {
-    prompt("need to delete");
     await deleteProduct(product_id);
+    alert("Deleted");
     await getAllProducts();
   };
 
-  const setData = async (datas) => {
-    let {
-      product_id,
-      product_name,
-      product_desc,
-      product_price,
-      product_image,
-    } = datas;
-    localStorage.setItem("product_id", product_id);
-    localStorage.setItem("product_name", product_name);
-    localStorage.setItem("product_desc", product_desc);
-    localStorage.setItem("product_price", product_price);
-    localStorage.setItem("product_image", product_image);
-  };
+  const setData = async (datas) => {};
   return (
     <div>
       <h2>List of Products</h2>
@@ -69,16 +59,15 @@ const Products = () => {
                   <td>{value.product_desc}</td>
                   <td>{value.product_price}</td>
                   <td>
-                    <NavLink to="/updateProduct">
-                      <button
-                        onClick={() => {
-                          setData(value);
-                        }}
-                        className="success"
-                      >
-                        Edit
-                      </button>
-                    </NavLink>
+                    <button
+                      onClick={() => {
+                        setactionType("update");
+                      setselectedProduct(value);
+                      }}
+                      className="success"
+                    >
+                      Edit
+                    </button>
                   </td>
                   <td>
                     <button
@@ -97,11 +86,20 @@ const Products = () => {
           </table>
         )}
       </div>
-      <NavLink to="AddProduct">
-        <button>Add New Product</button>
-      </NavLink>
-
-      <Outlet />
+      <button
+        onClick={() => {
+          setactionType("new");
+        }}
+      >
+        Add New Product
+      </button>
+      {actionType !== null && (
+        <UpdateProduct
+          selectedProduct={selectedProduct}
+          actionType={actionType}
+          getAllProducts={getAllProducts}
+        />
+      )}
     </div>
   );
 };

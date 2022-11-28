@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, Outlet } from "react-router-dom";
-import {
-  deleteCategory,
-  fetchCategory,
-} from "../../API/apiService";
+import { deleteCategory, fetchCategory } from "../../API/apiService";
+import NewCategory from "./NewCategory/NewCategory";
 
 export const Category = () => {
   const [categoriesData, setCategoriesData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [actionType, setactionType] = useState(null);
+  const [selectedCategory, setselectedCategory] = useState({});
 
   useEffect(() => {
     getAllCategories();
@@ -28,12 +27,7 @@ export const Category = () => {
     await deleteCategory(category_id);
     await getAllCategories();
   };
-  const setData = async (data) => {
-    let { category_id, category_name, category_desc } = data;
-    localStorage.setItem("category_id", category_id);
-    localStorage.setItem("category_name", category_name);
-    localStorage.setItem("category_desc", category_desc);
-  };
+
   return (
     <div className="categoryShown">
       <h3>List of Category</h3>
@@ -56,16 +50,16 @@ export const Category = () => {
                 <td>{value.category_name}</td>
                 <td>{value.category_desc}</td>
                 <td>
-                  <NavLink to="/update">
-                    <button
-                      onClick={() => {
-                        setData(value);
-                      }}
-                      className="success"
-                    >
-                      Edit
-                    </button>
-                  </NavLink>
+                  <button
+                    onClick={() => {
+                      // setData(value);
+                      setactionType("update");
+                      setselectedCategory(value);
+                    }}
+                    className="success"
+                  >
+                    Edit
+                  </button>
                 </td>
                 <td>
                   <button
@@ -84,11 +78,21 @@ export const Category = () => {
       )}
       {isLoading && <div>Data is Loading</div>}
 
-      <NavLink to="newCategory">
-        <button>Click to Add New Category</button>
-      </NavLink>
+      <button
+        onClick={() => {
+          setactionType("new");
+        }}
+      >
+        Click to Add New Category
+      </button>
 
-      <Outlet />
+      {actionType !== null && (
+        <NewCategory
+          selectedCategory={selectedCategory}
+          actionType={actionType}
+          getAllCategories={getAllCategories}
+        />
+      )}
     </div>
   );
 };

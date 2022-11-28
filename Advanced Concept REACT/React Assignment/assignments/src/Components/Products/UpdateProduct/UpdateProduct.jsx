@@ -1,59 +1,105 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { updateProduct } from "../../../API/apiService";
+import { addProduct, updateProduct } from "../../../API/apiService";
 
-const UpdateProduct = () => {
-  const navigate = useNavigate();
-  const [Product_Image, setProduct_Image] = useState();
-  const [Product_Name, setProduct_Name] = useState("");
-  const [Product_Description, setProduct_Description] = useState("");
+const UpdateProduct = (props) => {
+  const { selectedProduct, actionType, getAllProducts } = props;
+
+  const [Productimage, setProductimage] = useState("");
+  const [Productname, setProductname] = useState("");
+  const [Productdescription, setProductdescription] = useState("");
   const [Price, setPrice] = useState("");
-  const [id, setID] = useState(null);
   useEffect(() => {
-    setID(localStorage.getItem("product_id"));
-    setProduct_Image(localStorage.getItem("product_image"));
-    setProduct_Name(localStorage.getItem("product_name"));
-    setProduct_Description(localStorage.getItem("product_desc"));
-    setPrice(localStorage.getItem("product_price"));
-  }, []);
-  const update = async () => {
-    const updtP = {
-      id: id,
-      product_image: Product_Image,
-      product_name: Product_Name,
-      product_desc: Product_Description,
-      product_price: Price,
+    if (actionType === "update") {
+      setProductimage(selectedProduct.product_image);
+      setProductname(selectedProduct.product_name);
+      setProductdescription(selectedProduct.product_desc);
+      setPrice(selectedProduct.product_price);
+    }
+  }, [actionType, selectedProduct]);
+
+  const add = async () => {
+    if (
+      Productimage === "" ||
+      Productname === "" ||
+      Productdescription === "" ||
+      Price === ""
+    ) {
+      alert("Field is Empty");
+    } else {
+      const updtP = {
+        product_image: Productimage,
+        product_name: Productname,
+        product_desc: Productdescription,
+        product_price: Price,
+      };
+      try {
+        if (actionType === "new") {
+          await addProduct(updtP);
+        } else {
+          const updateC = {
+            ...updtP,
+            product_id: selectedProduct.product_id,
+          };
+          await updateProduct(updateC);
+        }
+        alert("Added");
+        getAllProducts();
+        setProductimage("");
+        setProductname("");
+        setProductdescription("");
+        setPrice("");
+      } catch (e) {
+        console.log(e);
+      }
+    }
+
+    const update = async () => {
+      const updC = {
+        product_image: Productimage,
+        product_name: Productname,
+        product_desc: Productdescription,
+        product_price: Price,
+      };
+      try {
+        await addProduct(updC);
+        alert("updated");
+        getAllProducts();
+        setProductimage("");
+        setProductname("");
+        setProductdescription("");
+        setPrice("");
+      } catch (e) {
+        console.log(e);
+      }
+      
     };
-    await updateProduct(updtP);
-    alert("updated");
-    navigate("/Products");
-    setProduct_Image("");
-    setProduct_Name("");
-    setProduct_Description("");
-    setPrice("");
   };
+
   return (
-    <div>
+    <div className="addProducts">
+      <h1>
+        {actionType === "new" ? "Add New Data" : "Update the Existing Data"}
+      </h1>
       <label>Product Image</label>
       <input
         type="url"
         placeholder="Image of the Product"
-        value={Product_Image}
-        onChange={(e) => setProduct_Image(e.target.value)}
+        value={Productimage}
+        onChange={(e) => setProductimage(e.target.value)}
       ></input>
       <label>Product Name</label>
       <input
         type="text"
         placeholder="Name of the Product"
-        value={Product_Name}
-        onChange={(e) => setProduct_Name(e.target.value)}
+        value={Productname}
+        onChange={(e) => setProductname(e.target.value)}
       />
       <label>Product Description</label>
       <input
         type="text"
-        value={Product_Description}
+        value={Productdescription}
         placeholder="Product Description"
-        onChange={(e) => setProduct_Description(e.target.value)}
+        onChange={(e) => setProductdescription(e.target.value)}
       />
       <label>Product Price</label>
       <input
@@ -66,7 +112,7 @@ const UpdateProduct = () => {
       <button
         type="submit"
         onClick={() => {
-          update();
+          add();
         }}
       >
         Update

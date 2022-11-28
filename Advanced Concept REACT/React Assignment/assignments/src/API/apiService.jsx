@@ -42,8 +42,9 @@ const addCategory = async (newCategoryData) => {
     });
 };
 const addProduct = async (newData) => {
+  console.log(newData);
   return axiosParseData
-    .post("/addnewproduct/", newData)
+    .post("/addnewproduct", newData)
     .then((response) => {
       return response.data;
     })
@@ -51,19 +52,10 @@ const addProduct = async (newData) => {
       throw e;
     });
 };
-// const updateCategoryValue =async(category_id)=>{
-//   return axiosParseData
-//   .get("/categories/" + category_id)
-//   .then((response) => {
-//     return response.data;
-//   })
-//   .catch((e) => {
-//     throw e;
-//   });
-// }
+
 const updateCategory = async (updateCategoryData) => {
   return axiosParseData
-    .put("/categories/" + updateCategoryData.id, updateCategoryData)
+    .put("/categories/" + updateCategoryData.category_id, updateCategoryData)
     .then((response) => {
       return response.data;
     })
@@ -74,7 +66,7 @@ const updateCategory = async (updateCategoryData) => {
 const updateProduct = async (updateProductData) => {
   console.log(updateProductData);
   return axiosParseData
-    .put("/Products/" + updateProductData.id, updateProductData)
+    .put("/Products/" + updateProductData.product_id, updateProductData)
     .then((response) => {
       return response.data;
     })
