@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { deleteProduct, fetchProducts } from "../../API/apiService";
 const Products = () => {
   const [productsData, setProductsData] = useState([]);
@@ -19,8 +19,24 @@ const Products = () => {
     }
   };
   const deleteC = async (product_id) => {
+    prompt("need to delete");
     await deleteProduct(product_id);
     await getAllProducts();
+  };
+
+  const setData = async (datas) => {
+    let {
+      product_id,
+      product_name,
+      product_desc,
+      product_price,
+      product_image,
+    } = datas;
+    localStorage.setItem("product_id", product_id);
+    localStorage.setItem("product_name", product_name);
+    localStorage.setItem("product_desc", product_desc);
+    localStorage.setItem("product_price", product_price);
+    localStorage.setItem("product_image", product_image);
   };
   return (
     <div>
@@ -53,7 +69,16 @@ const Products = () => {
                   <td>{value.product_desc}</td>
                   <td>{value.product_price}</td>
                   <td>
-                    <button className="success"> Edit</button>
+                    <NavLink to="/updateProduct">
+                      <button
+                        onClick={() => {
+                          setData(value);
+                        }}
+                        className="success"
+                      >
+                        Edit
+                      </button>
+                    </NavLink>
                   </td>
                   <td>
                     <button
@@ -62,7 +87,6 @@ const Products = () => {
                         deleteC(value.product_id);
                       }}
                     >
-                      {" "}
                       Delete
                     </button>
                   </td>

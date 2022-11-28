@@ -3,9 +3,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import {
   deleteCategory,
   fetchCategory,
-  updateCategory,
 } from "../../API/apiService";
-import UpdateCategory from "./UpdatedCategory/UpdateCategory";
 
 export const Category = () => {
   const [categoriesData, setCategoriesData] = useState([]);
@@ -58,18 +56,16 @@ export const Category = () => {
                 <td>{value.category_name}</td>
                 <td>{value.category_desc}</td>
                 <td>
-                <NavLink to="/update">
-
-                  <button
-                    onClick={() => {
-                      setData(value);
-                    }}
-                    className="success"
-                  >
-                    Edit
-                  </button>
-                </NavLink>
-              
+                  <NavLink to="/update">
+                    <button
+                      onClick={() => {
+                        setData(value);
+                      }}
+                      className="success"
+                    >
+                      Edit
+                    </button>
+                  </NavLink>
                 </td>
                 <td>
                   <button

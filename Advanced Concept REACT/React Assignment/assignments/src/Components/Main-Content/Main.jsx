@@ -8,6 +8,7 @@ import NewCategory from "../Category/NewCategory/NewCategory";
 import AddProduct from "../Products/Addproduct/AddProduct";
 import Products from "../Products/Products";
 import UpdateCategory from "../Category/UpdatedCategory/UpdateCategory";
+import UpdateProduct from "../Products/UpdateProduct/UpdateProduct";
 
 const Main = () => {
   return (
@@ -23,6 +24,7 @@ const Main = () => {
         <Route path="Products" element={<Products />} >
           <Route path="AddProduct" element={<AddProduct/>}/>
         </Route>
+        <Route path="updateProduct" element={<UpdateProduct/>}/>
         <Route path="about" element={<About />} />
       </Routes>
     </div>

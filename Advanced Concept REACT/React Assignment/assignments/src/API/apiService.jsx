@@ -51,16 +51,16 @@ const addProduct = async (newData) => {
       throw e;
     });
 };
-const updateCategoryValue =async(category_id)=>{
-  return axiosParseData
-  .get("/categories/" + category_id)
-  .then((response) => {
-    return response.data;
-  })
-  .catch((e) => {
-    throw e;
-  });
-}
+// const updateCategoryValue =async(category_id)=>{
+//   return axiosParseData
+//   .get("/categories/" + category_id)
+//   .then((response) => {
+//     return response.data;
+//   })
+//   .catch((e) => {
+//     throw e;
+//   });
+// }
 const updateCategory = async (updateCategoryData) => {
   return axiosParseData
     .put("/categories/" + updateCategoryData.id, updateCategoryData)
@@ -72,8 +72,9 @@ const updateCategory = async (updateCategoryData) => {
     });
 };
 const updateProduct = async (updateProductData) => {
+  console.log(updateProductData);
   return axiosParseData
-    .put("/Products/" + updateProductData.category_id, updateProductData)
+    .put("/Products/" + updateProductData.id, updateProductData)
     .then((response) => {
       return response.data;
     })
