@@ -31,6 +31,7 @@ const fetchProducts = async () => {
       console.log(e);
     });
 };
+
 const addCategory = async (newCategoryData) => {
   return axiosParseData
     .post("/addnewCategory/", newCategoryData)
@@ -84,6 +85,17 @@ const deleteCategory = async (category_id) => {
       throw e;
     });
 };
+const filterData = async (category_id) => {
+  console.log(category_id);
+  return axiosParseData
+    .get("/Products/" + category_id)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((e) => {
+      throw e;
+    });
+};
 const deleteProduct = async (product_id) => {
   return axiosParseData
     .delete("/Products/" + product_id)
@@ -103,4 +115,5 @@ export {
   updateProduct,
   deleteCategory,
   deleteProduct,
+  filterData
 };

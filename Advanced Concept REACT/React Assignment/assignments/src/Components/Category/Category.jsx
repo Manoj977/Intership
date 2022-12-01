@@ -29,15 +29,16 @@ export const Category = () => {
   };
 
   return (
-    <div className="categoryShown">
+    <div className="categoryShown ">
       <h3>List of Category</h3>
+      {isLoading && <div>Data is Loading</div>}
       {!isLoading && (
         <table>
           <thead>
             <tr>
               <td>Category ID</td>
               <td>Category Name</td>
-              <td>Category Desc</td>
+              {/* <td>Category Desc</td> */}
               <td className="action" colSpan={2}>
                 Action
               </td>
@@ -48,11 +49,10 @@ export const Category = () => {
               <tr key={index}>
                 <td>{value.category_id}</td>
                 <td>{value.category_name}</td>
-                <td>{value.category_desc}</td>
+                {/* <td>{value.category_desc}</td> */}
                 <td>
                   <button
                     onClick={() => {
-                      // setData(value);
                       setactionType("update");
                       setselectedCategory(value);
                     }}
@@ -76,8 +76,6 @@ export const Category = () => {
           </tbody>
         </table>
       )}
-      {isLoading && <div>Data is Loading</div>}
-
       <button
         onClick={() => {
           setactionType("new");
@@ -85,9 +83,12 @@ export const Category = () => {
       >
         Click to Add New Category
       </button>
+      
+
 
       {actionType !== null && (
         <NewCategory
+          setactionType={setactionType}
           selectedCategory={selectedCategory}
           actionType={actionType}
           getAllCategories={getAllCategories}

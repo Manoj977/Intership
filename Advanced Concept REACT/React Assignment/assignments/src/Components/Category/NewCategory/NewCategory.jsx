@@ -3,7 +3,8 @@ import React, { useState, useEffect } from "react";
 import { addCategory, updateCategory } from "../../../API/apiService";
 
 const NewCategory = (props) => {
-  const { selectedCategory, actionType, getAllCategories } = props;
+  const { selectedCategory, actionType, setactionType, getAllCategories } =
+    props;
   const [Name, setName] = useState("");
   const [Desc, setDesc] = useState("");
 
@@ -25,35 +26,26 @@ const NewCategory = (props) => {
       try {
         if (actionType === "new") {
           await addCategory(addC);
+        } else if (
+          selectedCategory.category_name === Name &&
+          selectedCategory.category_desc === Desc
+        ) {
+          alert("nothing get updated");
+          setactionType(null)
         } else {
           const updateObject = {
             ...addC,
             category_id: selectedCategory.category_id,
           };
           await updateCategory(updateObject);
+          alert("updated");
         }
-        alert("Added");
         getAllCategories();
         setName("");
         setDesc("");
       } catch (e) {
         console.log(e);
       }
-    }
-  };
-  const update = async () => {
-    const updC = {
-      category_name: Name,
-      category_desc: Desc,
-    };
-    try {
-      await addCategory(updC);
-      alert("updated");
-      getAllCategories();
-      setName("");
-      setDesc("");
-    } catch (e) {
-      console.log(e);
     }
   };
 
@@ -72,6 +64,7 @@ const NewCategory = (props) => {
           value={Name}
           placeholder="Name of the Category"
         />
+        
         <br />
         <input
           onChange={(e) => {
@@ -82,7 +75,7 @@ const NewCategory = (props) => {
           placeholder="Category Description"
         />
         <br />
-        <button onClick={add}>Add New Category</button>
+        <button onClick={add}>Update the Category</button>
       </div>
     </div>
   );

@@ -1,13 +1,18 @@
+/* eslint-disable no-const-assign */
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
-import { addProduct, updateProduct } from "../../../API/apiService";
 
+import { addProduct, filterData, updateProduct } from "../../../API/apiService";
+import { Navigate } from "react-router-dom";
 const UpdateProduct = (props) => {
-  const { selectedProduct, actionType, getAllProducts } = props;
+  const { selectedProduct, actionType, getAllProducts, categoriesData } = props;
 
   const [Productimage, setProductimage] = useState("");
   const [Productname, setProductname] = useState("");
   const [Productdescription, setProductdescription] = useState("");
+  const [Category, setCategory] = useState("");
   const [Price, setPrice] = useState("");
+
   useEffect(() => {
     if (actionType === "update") {
       setProductimage(selectedProduct.product_image);
@@ -41,40 +46,24 @@ const UpdateProduct = (props) => {
             product_id: selectedProduct.product_id,
           };
           await updateProduct(updateC);
+          alert("updated");
+          <Navigate to="/Products" />;
         }
-        alert("Added");
         getAllProducts();
         setProductimage("");
         setProductname("");
+        setCategory("");
         setProductdescription("");
         setPrice("");
       } catch (e) {
         console.log(e);
       }
     }
-
-    const update = async () => {
-      const updC = {
-        product_image: Productimage,
-        product_name: Productname,
-        product_desc: Productdescription,
-        product_price: Price,
-      };
-      try {
-        await addProduct(updC);
-        alert("updated");
-        getAllProducts();
-        setProductimage("");
-        setProductname("");
-        setProductdescription("");
-        setPrice("");
-      } catch (e) {
-        console.log(e);
-      }
-      
-    };
   };
-
+  const productCategoryID = async (category_id) => {
+    console.log(category_id);
+    await filterData(category_id);
+  };
   return (
     <div className="addProducts">
       <h1>
@@ -85,7 +74,9 @@ const UpdateProduct = (props) => {
         type="url"
         placeholder="Image of the Product"
         value={Productimage}
-        onChange={(e) => setProductimage(e.target.value)}
+        onChange={(e) => {
+          setProductimage(e.target.value);
+        }}
       ></input>
       <label>Product Name</label>
       <input
@@ -94,6 +85,31 @@ const UpdateProduct = (props) => {
         value={Productname}
         onChange={(e) => setProductname(e.target.value)}
       />
+
+      <label>Product Category</label>
+
+      <select
+        defaultValue={"Please Select the Category"}
+        value={Category}
+        onChange={(e) => {
+          setCategory(e.target.value);
+          console.log(Category);
+          productCategoryID(Category);
+        }}
+      >
+        <option value={"Please Select the Category"}>
+          Please Select the Category
+        </option>
+        {categoriesData.map((option, index) => (
+          <option
+            key={index}
+            selected={selectedProduct.category_id === option.category_id}
+            value={option.category_id}
+          >
+            {option.category_name}
+          </option>
+        ))}
+      </select>
       <label>Product Description</label>
       <input
         type="text"

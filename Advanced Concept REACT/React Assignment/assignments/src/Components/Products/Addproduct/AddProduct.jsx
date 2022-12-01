@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { addProduct } from "../../../API/apiService";
 
 const AddProduct = () => {
@@ -7,7 +6,6 @@ const AddProduct = () => {
   const [Name, setName] = useState("");
   const [Model, setModel] = useState("");
   const [Price, setPrice] = useState("");
-  const navigate = useNavigate();
   const add = async () => {
     if (Name === "" || Model === "") {
       alert("Field is Empty");
@@ -20,18 +18,16 @@ const AddProduct = () => {
       };
       try {
         await addProduct(add_Product);
-        alert("Added");
         setName("");
         setModel("");
         setImage("");
         setPrice("");
-        navigate((window.location.reload()));
       } catch (e) {
         console.log(e);
       }
     }
   };
-  
+
   return (
     <div>
       <div className="addCategories">

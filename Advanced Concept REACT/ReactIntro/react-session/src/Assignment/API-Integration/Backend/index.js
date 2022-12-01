@@ -41,7 +41,6 @@ async function bootstrap() {
   //update Category
   app.put("/categories/:category_id", async (req, res) => {
     const categoryModel = new Model("category");
-    console.log(categoryModel);
 
     let payload = {
       category_name: req.body.category_name,
@@ -53,7 +52,7 @@ async function bootstrap() {
     );
     res.send(data);
   });
-// Delete a Category
+  // Delete a Category
   app.delete("/categories/:category_id", async (req, res) => {
     const categoryModel = new Model("category");
     const productModel = new Model("products");
@@ -63,7 +62,7 @@ async function bootstrap() {
     await productModel.remove({ category_id: req.params.category_id });
     res.send(data);
   });
-//fetch category id from products ex:phone => list of phones
+  //fetch category id from products ex:phone => list of phones
   app.get("/products/:category_id", async (req, res) => {
     const productModel = new Model("products");
     let filter = {};
@@ -73,14 +72,14 @@ async function bootstrap() {
     let data = await productModel.find(filter);
     res.send(data);
   });
-//List of Products Shown
+  //List of Products Shown
   app.get("/products", async (req, res) => {
     const productModel = new Model("products");
     let filter = {};
     let data = await productModel.find(filter);
     res.send(data);
   });
-// Add a new Product
+  // Add a new Product
   app.post("/addnewproduct", async (req, res) => {
     const productModel = new Model("products");
     let data = await productModel.insert({
@@ -93,7 +92,7 @@ async function bootstrap() {
     });
     res.send(data);
   });
-// update a products
+  // update a products
   app.put("/products/:product_id", async (req, res) => {
     const productModel = new Model("products");
     const newData = {
@@ -109,7 +108,7 @@ async function bootstrap() {
     );
     res.send(data);
   });
-// Delete a product
+  // Delete a product
   app.delete("/products/:product_id", async (req, res) => {
     const productModel = new Model("products");
     let data = await productModel.remove({ product_id: req.params.product_id });

@@ -27,18 +27,44 @@
 .content {
   display: flex;
 }
-.success,.success:hover,.success:focus {
+.success,
+.success:hover,
+.success:focus {
   background-color: #198754;
   border: #ccc;
 }
-.danger,.danger:hover,.danger:focus {
+.danger,
+.danger:hover,
+.danger:focus {
   background-color: #c32d13;
   border: #ccc;
 }
-.product_image{
+.product_image {
   width: 50px;
   margin-left: 30px;
 }
-.action{
+.action {
   text-align: center;
+}
+tr {
+  height: 124px;
+}
+
+.Price, .Name{
+  margin-inline: 30px;
+  align-items: center;
+  display: flex;
+  font-size: 25px;
+  float: right;
+}
+.Price p,.Name p{
+  margin-top: 20px;
+}
+.button {
+  background-color: wheat;
+  display: inline-block !important;
+  align-items: center;
+  margin: 10px !important;
+  padding: 10px !important;
+  border: none !important;
 }
