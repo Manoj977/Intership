@@ -33,7 +33,7 @@ async function bootstrap() {
     let payload = {
       category_name: req.body.category_name,
       category_desc: req.body.category_desc,
-      category_id: "CAT_" + new Date().getTime(),
+      N: "CAT_" + new Date().getTime(),
     };
     let data = await categoryModel.insert(payload);
     res.send(data);
@@ -62,14 +62,16 @@ async function bootstrap() {
     await productModel.remove({ category_id: req.params.category_id });
     res.send(data);
   });
-  //fetch category id from products ex:phone => list of phones
+  //fetchproducts from category id  example: phone => list of phones
   app.get("/products/:category_id", async (req, res) => {
     const productModel = new Model("products");
     let filter = {};
     if (req.params.category_id) {
       filter.category_id = req.params.category_id;
+      console.log(filter.category_id)
     }
     let data = await productModel.find(filter);
+    console.log("Data: "+data)
     res.send(data);
   });
   //List of Products Shown

@@ -86,16 +86,18 @@ const deleteCategory = async (category_id) => {
     });
 };
 const filterData = async (category_id) => {
-  console.log(category_id);
   return axiosParseData
-    .get("/Products/" + category_id)
+    .get("/products/" + category_id)
     .then((response) => {
+      console.log(response.data)
       return response.data;
     })
     .catch((e) => {
+      console.log("Error: " + e);
       throw e;
     });
 };
+
 const deleteProduct = async (product_id) => {
   return axiosParseData
     .delete("/Products/" + product_id)
@@ -115,5 +117,5 @@ export {
   updateProduct,
   deleteCategory,
   deleteProduct,
-  filterData
+  filterData,
 };

@@ -26,6 +26,7 @@ export const Category = () => {
   const deleteC = async (category_id) => {
     await deleteCategory(category_id);
     await getAllCategories();
+    setactionType(null);
   };
 
   return (
@@ -38,7 +39,7 @@ export const Category = () => {
             <tr>
               <td>Category ID</td>
               <td>Category Name</td>
-              {/* <td>Category Desc</td> */}
+
               <td className="action" colSpan={2}>
                 Action
               </td>
@@ -49,7 +50,6 @@ export const Category = () => {
               <tr key={index}>
                 <td>{value.category_id}</td>
                 <td>{value.category_name}</td>
-                {/* <td>{value.category_desc}</td> */}
                 <td>
                   <button
                     onClick={() => {
@@ -83,8 +83,6 @@ export const Category = () => {
       >
         Click to Add New Category
       </button>
-      
-
 
       {actionType !== null && (
         <NewCategory

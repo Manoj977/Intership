@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 
 import { addCategory, updateCategory } from "../../../API/apiService";
@@ -17,7 +18,10 @@ const NewCategory = (props) => {
 
   const add = async () => {
     if (Name === "" || Desc === "") {
+      setName("");
+      setDesc("");
       alert("Field is Empty");
+      setactionType(null);
     } else {
       const addC = {
         category_name: Name,
@@ -26,12 +30,13 @@ const NewCategory = (props) => {
       try {
         if (actionType === "new") {
           await addCategory(addC);
+          setactionType(null);
         } else if (
           selectedCategory.category_name === Name &&
           selectedCategory.category_desc === Desc
         ) {
           alert("nothing get updated");
-          setactionType(null)
+          setactionType(null);
         } else {
           const updateObject = {
             ...addC,
@@ -39,6 +44,7 @@ const NewCategory = (props) => {
           };
           await updateCategory(updateObject);
           alert("updated");
+          setactionType(null);
         }
         getAllCategories();
         setName("");
@@ -48,6 +54,7 @@ const NewCategory = (props) => {
       }
     }
   };
+
 
   return (
     <div className="addCategories">
@@ -64,7 +71,7 @@ const NewCategory = (props) => {
           value={Name}
           placeholder="Name of the Category"
         />
-        
+
         <br />
         <input
           onChange={(e) => {
@@ -75,7 +82,11 @@ const NewCategory = (props) => {
           placeholder="Category Description"
         />
         <br />
-        <button onClick={add}>Update the Category</button>
+        {actionType === "new" ? (
+          <button onClick={add}>Add</button>
+        ) : (
+          <button onClick={add}>Update</button>
+        )}
       </div>
     </div>
   );

@@ -2,10 +2,16 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 
-import { addProduct, filterData, updateProduct } from "../../../API/apiService";
-import { Navigate } from "react-router-dom";
+import { addProduct, updateProduct } from "../../../API/apiService";
+
 const UpdateProduct = (props) => {
-  const { selectedProduct, actionType, getAllProducts, categoriesData } = props;
+  const {
+    selectedProduct,
+    actionType,
+    setactionType,
+    getAllProducts,
+    categoriesData,
+  } = props;
 
   const [Productimage, setProductimage] = useState("");
   const [Productname, setProductname] = useState("");
@@ -19,6 +25,7 @@ const UpdateProduct = (props) => {
       setProductname(selectedProduct.product_name);
       setProductdescription(selectedProduct.product_desc);
       setPrice(selectedProduct.product_price);
+      setCategory(selectedProduct.category_id);
     }
   }, [actionType, selectedProduct]);
 
@@ -30,16 +37,18 @@ const UpdateProduct = (props) => {
       Price === ""
     ) {
       alert("Field is Empty");
+      setactionType(null);
     } else {
       const updtP = {
         product_image: Productimage,
         product_name: Productname,
         product_desc: Productdescription,
         product_price: Price,
+        category_id: Category,
       };
       try {
+        await addProduct(updtP);
         if (actionType === "new") {
-          await addProduct(updtP);
         } else {
           const updateC = {
             ...updtP,
@@ -47,8 +56,9 @@ const UpdateProduct = (props) => {
           };
           await updateProduct(updateC);
           alert("updated");
-          <Navigate to="/Products" />;
+          setactionType(null);
         }
+        setactionType(null);
         getAllProducts();
         setProductimage("");
         setProductname("");
@@ -60,10 +70,7 @@ const UpdateProduct = (props) => {
       }
     }
   };
-  const productCategoryID = async (category_id) => {
-    console.log(category_id);
-    await filterData(category_id);
-  };
+
   return (
     <div className="addProducts">
       <h1>
@@ -89,15 +96,15 @@ const UpdateProduct = (props) => {
       <label>Product Category</label>
 
       <select
-        defaultValue={"Please Select the Category"}
         value={Category}
         onChange={(e) => {
-          setCategory(e.target.value);
-          console.log(Category);
-          productCategoryID(Category);
+          let value = e.target.value;
+          setCategory(value);
         }}
       >
-        <option value={"Please Select the Category"}>
+        <option
+          value={Category === "" ? Category : "Please Select the Category"}
+        >
           Please Select the Category
         </option>
         {categoriesData.map((option, index) => (
@@ -125,14 +132,11 @@ const UpdateProduct = (props) => {
         onChange={(e) => setPrice(e.target.value)}
       />
       <br />
-      <button
-        type="submit"
-        onClick={() => {
-          add();
-        }}
-      >
-        Update
-      </button>
+      {actionType === "new" ? (
+        <button onClick={add}>Add</button>
+      ) : (
+        <button onClick={add}>Update</button>
+      )}
     </div>
   );
 };
